@@ -14,6 +14,7 @@
 		04ED62C51CA6AAE5006712F1 /* RACBabyDoodle.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04ED62C31CA6AAE5006712F1 /* RACBabyDoodle.xcdatamodeld */; };
 		04ED62C71CA6AAE5006712F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04ED62C61CA6AAE5006712F1 /* Assets.xcassets */; };
 		04ED62CA1CA6AAE5006712F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04ED62C81CA6AAE5006712F1 /* LaunchScreen.storyboard */; };
+		FECF661AFC4917C1899C4911 /* Pods_RACBabyDoodle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEA03EFFD5868452D8A3A925 /* Pods_RACBabyDoodle.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,9 @@
 		04ED62C61CA6AAE5006712F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04ED62C91CA6AAE5006712F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04ED62CB1CA6AAE5006712F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		41E4B0B2325072798B6A7F00 /* Pods-RACBabyDoodle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACBabyDoodle.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RACBabyDoodle/Pods-RACBabyDoodle.debug.xcconfig"; sourceTree = "<group>"; };
+		C1887B21F4C2E92FF0360EE6 /* Pods-RACBabyDoodle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACBabyDoodle.release.xcconfig"; path = "Pods/Target Support Files/Pods-RACBabyDoodle/Pods-RACBabyDoodle.release.xcconfig"; sourceTree = "<group>"; };
+		FEA03EFFD5868452D8A3A925 /* Pods_RACBabyDoodle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RACBabyDoodle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FECF661AFC4917C1899C4911 /* Pods_RACBabyDoodle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +51,8 @@
 			children = (
 				04ED62B61CA6AAE5006712F1 /* RACBabyDoodle */,
 				04ED62B51CA6AAE5006712F1 /* Products */,
+				EC0765EE823FD11CC1F8740F /* Pods */,
+				A83DF8A3D1127473F2147E3A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,6 +89,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		A83DF8A3D1127473F2147E3A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FEA03EFFD5868452D8A3A925 /* Pods_RACBabyDoodle.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EC0765EE823FD11CC1F8740F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				41E4B0B2325072798B6A7F00 /* Pods-RACBabyDoodle.debug.xcconfig */,
+				C1887B21F4C2E92FF0360EE6 /* Pods-RACBabyDoodle.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -89,9 +113,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04ED62CE1CA6AAE5006712F1 /* Build configuration list for PBXNativeTarget "RACBabyDoodle" */;
 			buildPhases = (
+				E65B4CEC415582DA19F40D5B /* Check Pods Manifest.lock */,
 				04ED62B01CA6AAE5006712F1 /* Sources */,
 				04ED62B11CA6AAE5006712F1 /* Frameworks */,
 				04ED62B21CA6AAE5006712F1 /* Resources */,
+				628A25640EC9657670A8B102 /* Embed Pods Frameworks */,
+				72BB5D348E9EB29259D4C81F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -146,6 +173,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		628A25640EC9657670A8B102 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RACBabyDoodle/Pods-RACBabyDoodle-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		72BB5D348E9EB29259D4C81F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RACBabyDoodle/Pods-RACBabyDoodle-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E65B4CEC415582DA19F40D5B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		04ED62B01CA6AAE5006712F1 /* Sources */ = {
@@ -265,6 +340,7 @@
 		};
 		04ED62CF1CA6AAE5006712F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41E4B0B2325072798B6A7F00 /* Pods-RACBabyDoodle.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RACBabyDoodle/Info.plist;
@@ -276,6 +352,7 @@
 		};
 		04ED62D01CA6AAE5006712F1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1887B21F4C2E92FF0360EE6 /* Pods-RACBabyDoodle.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RACBabyDoodle/Info.plist;
@@ -304,6 +381,7 @@
 				04ED62D01CA6AAE5006712F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
