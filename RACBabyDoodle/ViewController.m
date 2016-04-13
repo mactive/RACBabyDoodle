@@ -22,14 +22,53 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   
-  self.nameField = [[UITextField alloc]initWithFrame:CGRectMake(50, 100, 200, 40)];
+  self.nameField = [[UITextField alloc] init];
   [self.nameField setBorderStyle:UITextBorderStyleLine];
-  
+  self.nameField.translatesAutoresizingMaskIntoConstraints = NO;
+
   self.button = [UIButton buttonWithType:UIButtonTypeCustom];
   [self.button setFrame:CGRectMake(40, 150, 120, 40)];
   [self.button setBackgroundColor:[UIColor grayColor]];
   
-  [self.view addSubview:self.nameField];
+  UIEdgeInsets padding = UIEdgeInsetsMake(10, 10, 10, 10);
+  
+  UIView * superView = [[UIView alloc]initWithFrame:CGRectMake(0, 100, 200, 60)];
+  [superView setBackgroundColor:[UIColor grayColor]];
+  [superView addSubview:self.nameField];
+
+  [self.view addSubview:superView];
+  [superView addConstraints:@[
+      [NSLayoutConstraint constraintWithItem:self.nameField
+                                   attribute:NSLayoutAttributeTop
+                                   relatedBy:NSLayoutRelationEqual
+                                      toItem:superView
+                                   attribute:NSLayoutAttributeTop
+                                  multiplier:1.0
+                                    constant:padding.top],
+      [NSLayoutConstraint constraintWithItem:self.nameField
+                                   attribute:NSLayoutAttributeLeft
+                                   relatedBy:NSLayoutRelationEqual
+                                      toItem:superView
+                                   attribute:NSLayoutAttributeLeft
+                                  multiplier:1.0
+                                    constant:padding.left],
+      [NSLayoutConstraint constraintWithItem:self.nameField
+                                   attribute:NSLayoutAttributeBottom
+                                   relatedBy:NSLayoutRelationEqual
+                                      toItem:superView
+                                   attribute:NSLayoutAttributeBottom
+                                  multiplier:1.0
+                                    constant:-padding.bottom],
+      [NSLayoutConstraint constraintWithItem:self.nameField
+                                   attribute:NSLayoutAttributeRight
+                                   relatedBy:NSLayoutRelationEqual
+                                      toItem:superView
+                                   attribute:NSLayoutAttributeRight
+                                  multiplier:1.0
+                                    constant:-padding.right],
+  ]];
+  
+  
   [self.view addSubview:self.button];
   
   
