@@ -10,16 +10,27 @@
 #import <ReactiveCocoa/ReactiveCocoa.h>
 
 @interface ViewController ()
-@property (nonatomic, strong) IBOutlet UITextField *nameField;
-@property (nonatomic, strong) IBOutlet UIButton *button;
+@property (nonatomic, strong) UITextField *nameField;
+@property (nonatomic, strong) UIButton *button;
 
 @end
 
 @implementation ViewController
+@synthesize nameField;
+@synthesize button;
 
 - (void)viewDidLoad {
   [super viewDidLoad];
   
+  self.nameField = [[UITextField alloc]initWithFrame:CGRectMake(50, 100, 200, 40)];
+  [self.nameField setBorderStyle:UITextBorderStyleLine];
+  
+  self.button = [UIButton buttonWithType:UIButtonTypeCustom];
+  [self.button setFrame:CGRectMake(40, 150, 120, 40)];
+  [self.button setBackgroundColor:[UIColor grayColor]];
+  
+  [self.view addSubview:self.nameField];
+  [self.view addSubview:self.button];
   
   
   // 绑定第一个
@@ -38,10 +49,56 @@
   
   
   [self racAction];
-  
+  [self coldSignal];
+  [self testRACLifting];
   
   
   // Do any additional setup after loading the view, typically from a nib.
+}
+
+-(void)testRACLifting
+{
+  // A 暂停了2S
+  RACSignal *signalA = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+    double delayInSeconds = 2.0;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds *NSEC_PER_SEC));
+    dispatch_after(popTime, dispatch_get_main_queue(), ^{
+      [subscriber sendNext:@"A"];
+    });
+    return nil;
+  }];
+  
+  
+  // B 输出了两次信号
+  RACSignal *signalB = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+    [subscriber sendNext:@"B"];
+    [subscriber sendNext:@"Another A"];
+    [subscriber sendCompleted];
+    return nil;
+  }];
+  
+  //它的意思是当signalA和signalB都至少sendNext过一次，接下来只要其中任意一个signal有了新的内容，doA:withB这个方法就会自动被触发。
+  // 所以他会等A 然后 B已经执行了两个了 所以B会是第二个send的内容
+  [self rac_liftSelector:@selector(doA:withB:) withSignals:signalA,signalB, nil];
+  
+}
+
+- (void)doA:(NSString *)A withB:(NSString *)B
+{
+  NSLog(@"A:%@ and B:%@",A,B);
+}
+
+-(void)coldSignal{
+  RACSignal *signal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+    NSLog(@"triggered");
+    [subscriber sendNext:@"foobar"];
+    [subscriber sendCompleted];
+    return nil;
+  }];
+  
+  [signal subscribeCompleted:^{
+    NSLog(@"subscription %@",signal.name);
+  }];
 }
 
 -(void)racAction{
@@ -60,8 +117,6 @@
       return [UIColor blueColor];
     }
   }];
-  
-  
   
 }
 

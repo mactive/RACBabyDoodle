@@ -7,15 +7,27 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
-
+@property(nonatomic, strong)ViewController *viewController;
 @end
 
 @implementation AppDelegate
 
+@synthesize viewController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+  self.viewController  = [[ViewController alloc]initWithNibName:nil bundle:nil];
+
+  
+  self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+  self.window.backgroundColor = [UIColor whiteColor];
+  
+  [self.window setRootViewController:self.viewController];
+  
+  [self.window makeKeyAndVisible];
+
   // Override point for customization after application launch.
   return YES;
 }
