@@ -14,6 +14,8 @@
 		04ED62CA1CA6AAE5006712F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04ED62C81CA6AAE5006712F1 /* LaunchScreen.storyboard */; };
 		C26D812B1CBF26BA00B4E053 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C26D81261CBF26BA00B4E053 /* AppDelegate.m */; };
 		C26D81301CBF272200B4E053 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C26D812F1CBF272200B4E053 /* ViewController.m */; };
+		C2D37CEB1CC0788900C60D5C /* SRGViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D37CEA1CC0788900C60D5C /* SRGViewModel.m */; };
+		C2D37CEE1CC078C700C60D5C /* SRGCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D37CED1CC078C700C60D5C /* SRGCellViewModel.m */; };
 		FECF661AFC4917C1899C4911 /* Pods_RACBabyDoodle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEA03EFFD5868452D8A3A925 /* Pods_RACBabyDoodle.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +33,10 @@
 		C26D81261CBF26BA00B4E053 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		C26D812E1CBF272200B4E053 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		C26D812F1CBF272200B4E053 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C2D37CE91CC0788900C60D5C /* SRGViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SRGViewModel.h; path = Github/SRGViewModel.h; sourceTree = "<group>"; };
+		C2D37CEA1CC0788900C60D5C /* SRGViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SRGViewModel.m; path = Github/SRGViewModel.m; sourceTree = "<group>"; };
+		C2D37CEC1CC078C700C60D5C /* SRGCellViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SRGCellViewModel.h; path = Github/SRGCellViewModel.h; sourceTree = "<group>"; };
+		C2D37CED1CC078C700C60D5C /* SRGCellViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SRGCellViewModel.m; path = Github/SRGCellViewModel.m; sourceTree = "<group>"; };
 		FEA03EFFD5868452D8A3A925 /* Pods_RACBabyDoodle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RACBabyDoodle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -67,6 +73,12 @@
 		04ED62B61CA6AAE5006712F1 /* RACBabyDoodle */ = {
 			isa = PBXGroup;
 			children = (
+				C2D37CD81CC0780300C60D5C /* Util */,
+				C2D37CDC1CC0780300C60D5C /* Http */,
+				C2D37CE21CC0780300C60D5C /* DB */,
+				C2D37CE31CC0780300C60D5C /* Lib */,
+				C2D37CE41CC0780300C60D5C /* Service */,
+				C2D37CE51CC0780300C60D5C /* Entity */,
 				C26D812C1CBF272200B4E053 /* Module */,
 				C26D81231CBF26BA00B4E053 /* General */,
 				04ED62C01CA6AAE5006712F1 /* Main.storyboard */,
@@ -147,6 +159,7 @@
 		C26D812C1CBF272200B4E053 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				C2D37CE61CC0781600C60D5C /* Github */,
 				C26D812D1CBF272200B4E053 /* Try */,
 			);
 			path = Module;
@@ -159,6 +172,131 @@
 				C26D812F1CBF272200B4E053 /* ViewController.m */,
 			);
 			path = Try;
+			sourceTree = "<group>";
+		};
+		C2D37CD81CC0780300C60D5C /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				C2D37CD91CC0780300C60D5C /* NumberUtil */,
+				C2D37CDA1CC0780300C60D5C /* StringUtil */,
+				C2D37CDB1CC0780300C60D5C /* TimeUtil */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		C2D37CD91CC0780300C60D5C /* NumberUtil */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NumberUtil;
+			sourceTree = "<group>";
+		};
+		C2D37CDA1CC0780300C60D5C /* StringUtil */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = StringUtil;
+			sourceTree = "<group>";
+		};
+		C2D37CDB1CC0780300C60D5C /* TimeUtil */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TimeUtil;
+			sourceTree = "<group>";
+		};
+		C2D37CDC1CC0780300C60D5C /* Http */ = {
+			isa = PBXGroup;
+			children = (
+				C2D37CDD1CC0780300C60D5C /* Api */,
+				C2D37CDE1CC0780300C60D5C /* CodeHandler */,
+				C2D37CDF1CC0780300C60D5C /* ErrorHandler */,
+				C2D37CE01CC0780300C60D5C /* HttpHandler */,
+				C2D37CE11CC0780300C60D5C /* Manager */,
+			);
+			path = Http;
+			sourceTree = "<group>";
+		};
+		C2D37CDD1CC0780300C60D5C /* Api */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		C2D37CDE1CC0780300C60D5C /* CodeHandler */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CodeHandler;
+			sourceTree = "<group>";
+		};
+		C2D37CDF1CC0780300C60D5C /* ErrorHandler */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ErrorHandler;
+			sourceTree = "<group>";
+		};
+		C2D37CE01CC0780300C60D5C /* HttpHandler */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HttpHandler;
+			sourceTree = "<group>";
+		};
+		C2D37CE11CC0780300C60D5C /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		C2D37CE21CC0780300C60D5C /* DB */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DB;
+			sourceTree = "<group>";
+		};
+		C2D37CE31CC0780300C60D5C /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		C2D37CE41CC0780300C60D5C /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		C2D37CE51CC0780300C60D5C /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				C2D37CE71CC0782500C60D5C /* Github */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		C2D37CE61CC0781600C60D5C /* Github */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Github;
+			sourceTree = "<group>";
+		};
+		C2D37CE71CC0782500C60D5C /* Github */ = {
+			isa = PBXGroup;
+			children = (
+				C2D37CE91CC0788900C60D5C /* SRGViewModel.h */,
+				C2D37CEA1CC0788900C60D5C /* SRGViewModel.m */,
+				C2D37CEC1CC078C700C60D5C /* SRGCellViewModel.h */,
+				C2D37CED1CC078C700C60D5C /* SRGCellViewModel.m */,
+			);
+			name = Github;
 			sourceTree = "<group>";
 		};
 		EC0765EE823FD11CC1F8740F /* Pods */ = {
@@ -293,6 +431,8 @@
 			files = (
 				C26D812B1CBF26BA00B4E053 /* AppDelegate.m in Sources */,
 				04ED62C51CA6AAE5006712F1 /* RACBabyDoodle.xcdatamodeld in Sources */,
+				C2D37CEB1CC0788900C60D5C /* SRGViewModel.m in Sources */,
+				C2D37CEE1CC078C700C60D5C /* SRGCellViewModel.m in Sources */,
 				C26D81301CBF272200B4E053 /* ViewController.m in Sources */,
 				04ED62B91CA6AAE5006712F1 /* main.m in Sources */,
 			);
