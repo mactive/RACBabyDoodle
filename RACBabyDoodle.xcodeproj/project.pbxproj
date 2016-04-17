@@ -12,6 +12,8 @@
 		04ED62C51CA6AAE5006712F1 /* RACBabyDoodle.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04ED62C31CA6AAE5006712F1 /* RACBabyDoodle.xcdatamodeld */; };
 		04ED62C71CA6AAE5006712F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04ED62C61CA6AAE5006712F1 /* Assets.xcassets */; };
 		04ED62CA1CA6AAE5006712F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04ED62C81CA6AAE5006712F1 /* LaunchScreen.storyboard */; };
+		C2317A091CC36AB200562C2C /* SRGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2317A081CC36AB200562C2C /* SRGViewController.m */; };
+		C2317A0D1CC36E8800562C2C /* SRGTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2317A0C1CC36E8800562C2C /* SRGTableViewCell.m */; };
 		C26D812B1CBF26BA00B4E053 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C26D81261CBF26BA00B4E053 /* AppDelegate.m */; };
 		C26D81301CBF272200B4E053 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C26D812F1CBF272200B4E053 /* ViewController.m */; };
 		C2D37CEB1CC0788900C60D5C /* SRGViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D37CEA1CC0788900C60D5C /* SRGViewModel.m */; };
@@ -29,6 +31,11 @@
 		04ED62CB1CA6AAE5006712F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		41E4B0B2325072798B6A7F00 /* Pods-RACBabyDoodle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACBabyDoodle.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RACBabyDoodle/Pods-RACBabyDoodle.debug.xcconfig"; sourceTree = "<group>"; };
 		C1887B21F4C2E92FF0360EE6 /* Pods-RACBabyDoodle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACBabyDoodle.release.xcconfig"; path = "Pods/Target Support Files/Pods-RACBabyDoodle/Pods-RACBabyDoodle.release.xcconfig"; sourceTree = "<group>"; };
+		C2317A071CC36AB200562C2C /* SRGViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SRGViewController.h; path = Github/SRGViewController.h; sourceTree = "<group>"; };
+		C2317A081CC36AB200562C2C /* SRGViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SRGViewController.m; path = Github/SRGViewController.m; sourceTree = "<group>"; };
+		C2317A0A1CC36B4100562C2C /* RACBabyDoodle-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RACBabyDoodle-Prefix.pch"; sourceTree = "<group>"; };
+		C2317A0B1CC36E8800562C2C /* SRGTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SRGTableViewCell.h; path = Github/SRGTableViewCell.h; sourceTree = "<group>"; };
+		C2317A0C1CC36E8800562C2C /* SRGTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SRGTableViewCell.m; path = Github/SRGTableViewCell.m; sourceTree = "<group>"; };
 		C26D81251CBF26BA00B4E053 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C26D81261CBF26BA00B4E053 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		C26D812E1CBF272200B4E053 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -95,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				04ED62B81CA6AAE5006712F1 /* main.m */,
+				C2317A0A1CC36B4100562C2C /* RACBabyDoodle-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -295,6 +303,10 @@
 				C2D37CEA1CC0788900C60D5C /* SRGViewModel.m */,
 				C2D37CEC1CC078C700C60D5C /* SRGCellViewModel.h */,
 				C2D37CED1CC078C700C60D5C /* SRGCellViewModel.m */,
+				C2317A071CC36AB200562C2C /* SRGViewController.h */,
+				C2317A081CC36AB200562C2C /* SRGViewController.m */,
+				C2317A0B1CC36E8800562C2C /* SRGTableViewCell.h */,
+				C2317A0C1CC36E8800562C2C /* SRGTableViewCell.m */,
 			);
 			name = Github;
 			sourceTree = "<group>";
@@ -431,7 +443,9 @@
 			files = (
 				C26D812B1CBF26BA00B4E053 /* AppDelegate.m in Sources */,
 				04ED62C51CA6AAE5006712F1 /* RACBabyDoodle.xcdatamodeld in Sources */,
+				C2317A091CC36AB200562C2C /* SRGViewController.m in Sources */,
 				C2D37CEB1CC0788900C60D5C /* SRGViewModel.m in Sources */,
+				C2317A0D1CC36E8800562C2C /* SRGTableViewCell.m in Sources */,
 				C2D37CEE1CC078C700C60D5C /* SRGCellViewModel.m in Sources */,
 				C26D81301CBF272200B4E053 /* ViewController.m in Sources */,
 				04ED62B91CA6AAE5006712F1 /* main.m in Sources */,
@@ -547,6 +561,7 @@
 			baseConfigurationReference = 41E4B0B2325072798B6A7F00 /* Pods-RACBabyDoodle.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "RACBabyDoodle/RACBabyDoodle-Prefix.pch";
 				INFOPLIST_FILE = RACBabyDoodle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.thinktube.RACBabyDoodle;
@@ -559,6 +574,7 @@
 			baseConfigurationReference = C1887B21F4C2E92FF0360EE6 /* Pods-RACBabyDoodle.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "RACBabyDoodle/RACBabyDoodle-Prefix.pch";
 				INFOPLIST_FILE = RACBabyDoodle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.thinktube.RACBabyDoodle;

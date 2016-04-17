@@ -1,0 +1,30 @@
+//
+//  RACBabyDoodle-Prefix.pch
+//  RACBabyDoodle
+//
+//  Created by mengqian on 17/4/2016.
+//  Copyright © 2016 thinktube. All rights reserved.
+//
+
+#ifndef RACBabyDoodle_Prefix_pch
+#define RACBabyDoodle_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* RACBabyDoodle_Prefix_pch */
+
+
+
+#import <Availability.h>
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <ReactiveCocoa/ReactiveCocoa.h>
+#import <Masonry/Masonry.h>
+#endif

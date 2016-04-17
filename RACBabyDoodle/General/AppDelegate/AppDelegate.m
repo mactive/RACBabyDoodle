@@ -8,9 +8,10 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
-
+#import "SRGViewController.h"
 @interface AppDelegate ()
 @property(nonatomic, strong)ViewController *viewController;
+@property(nonatomic, strong)SRGViewController *srgViewController;
 @end
 
 @implementation AppDelegate
@@ -19,12 +20,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   self.viewController  = [[ViewController alloc]initWithNibName:nil bundle:nil];
-
+  self.srgViewController = [[SRGViewController alloc]init];
   
   self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
   self.window.backgroundColor = [UIColor whiteColor];
   
-  [self.window setRootViewController:self.viewController];
+  [self.window setRootViewController:self.srgViewController];
   
   [self.window makeKeyAndVisible];
 

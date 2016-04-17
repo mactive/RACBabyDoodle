@@ -7,11 +7,9 @@
 //
 
 #import "SRGViewModel.h"
-#import "ReactiveCocoa.h"
-#import "EXTScope.h"
 
 @interface SRGViewModel()
-@property(nonatomic)NSArray *users;
+//@property(nonatomic)NSArray *users;
 
 @end
 
@@ -37,7 +35,7 @@
       return array;
     }];
     
-    [sigMapped deliverOn:RACScheduler.mainThreadScheduler];
+    RAC(self, users) = [sigMapped deliverOn:RACScheduler.mainThreadScheduler];
     
     
 //    RAC(self,users) = [[[NSURLConnection rac_sendAsynchronousRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://api.github.com/users"]]] map:^id(RACTuple *value) {

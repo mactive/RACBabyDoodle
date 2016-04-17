@@ -7,7 +7,6 @@
 //
 
 #import "SRGCellViewModel.h"
-#import "ReactiveCocoa.h"
 
 @implementation SRGCellViewModel
 
