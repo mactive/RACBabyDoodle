@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04B7CCE01CDABD8700BFE3CE /* VaultShapeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B7CCDE1CDABD8700BFE3CE /* VaultShapeView.m */; };
 		04ED62B91CA6AAE5006712F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ED62B81CA6AAE5006712F1 /* main.m */; };
 		04ED62C21CA6AAE5006712F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04ED62C01CA6AAE5006712F1 /* Main.storyboard */; };
 		04ED62C51CA6AAE5006712F1 /* RACBabyDoodle.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04ED62C31CA6AAE5006712F1 /* RACBabyDoodle.xcdatamodeld */; };
@@ -22,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04B7CCDE1CDABD8700BFE3CE /* VaultShapeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VaultShapeView.m; path = RACBabyDoodle/General/VaultShapeView.m; sourceTree = SOURCE_ROOT; };
+		04B7CCDF1CDABD8700BFE3CE /* VaultShapeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VaultShapeView.h; path = RACBabyDoodle/General/VaultShapeView.h; sourceTree = SOURCE_ROOT; };
 		04ED62B41CA6AAE5006712F1 /* RACBabyDoodle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RACBabyDoodle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04ED62B81CA6AAE5006712F1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		04ED62C11CA6AAE5006712F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -59,6 +62,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04B7CCDA1CDABB9F00BFE3CE /* VaultNavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				04B7CCDE1CDABD8700BFE3CE /* VaultShapeView.m */,
+				04B7CCDF1CDABD8700BFE3CE /* VaultShapeView.h */,
+			);
+			name = VaultNavigationBar;
+			sourceTree = "<group>";
+		};
+		04B7CCDB1CDABBF500BFE3CE /* ListDoodle */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ListDoodle;
+			sourceTree = "<group>";
+		};
+		04B7CCDC1CDABC0500BFE3CE /* PlayDoodle */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = PlayDoodle;
+			sourceTree = "<group>";
+		};
+		04B7CCDD1CDABC1100BFE3CE /* ShareDoodle */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ShareDoodle;
+			sourceTree = "<group>";
+		};
 		04ED62AB1CA6AAE5006712F1 = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +193,7 @@
 		C26D812A1CBF26BA00B4E053 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				04B7CCDA1CDABB9F00BFE3CE /* VaultNavigationBar */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -167,6 +201,9 @@
 		C26D812C1CBF272200B4E053 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				04B7CCDD1CDABC1100BFE3CE /* ShareDoodle */,
+				04B7CCDC1CDABC0500BFE3CE /* PlayDoodle */,
+				04B7CCDB1CDABBF500BFE3CE /* ListDoodle */,
 				C2D37CE61CC0781600C60D5C /* Github */,
 				C26D812D1CBF272200B4E053 /* Try */,
 			);
@@ -447,6 +484,7 @@
 				C2D37CEB1CC0788900C60D5C /* SRGViewModel.m in Sources */,
 				C2317A0D1CC36E8800562C2C /* SRGTableViewCell.m in Sources */,
 				C2D37CEE1CC078C700C60D5C /* SRGCellViewModel.m in Sources */,
+				04B7CCE01CDABD8700BFE3CE /* VaultShapeView.m in Sources */,
 				C26D81301CBF272200B4E053 /* ViewController.m in Sources */,
 				04ED62B91CA6AAE5006712F1 /* main.m in Sources */,
 			);
