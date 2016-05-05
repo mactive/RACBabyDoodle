@@ -30,7 +30,7 @@
 - (void)drawRect:(CGRect)rect {
   NSLog(@"%f",rect.size.width);
   
-  CGFloat height = 60;
+  CGFloat height = 50;
   CGFloat curvingRate = 1.7;
   CGFloat width = rect.size.width;
   

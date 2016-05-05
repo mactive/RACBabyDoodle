@@ -33,6 +33,19 @@
 /// 初始化
 - (void)initCustomNavigationView
 {
+  /* 顶部颜色和Title字体颜色大小 */
+  self.navigationBar.barTintColor = DEFAULT_NAVBG_COLOR;
+  self.navigationBar.titleTextAttributes =
+  @{
+    NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue-Bold" size:24.0],
+    NSForegroundColorAttributeName: WHITECOLOR
+    };
+  self.navigationBar.barStyle = UIStatusBarStyleLightContent;
+  
+  /* title 向下移动10dp */
+  CGFloat verticalOffset = 12.0f;
+  [[UINavigationBar appearance] setTitleVerticalPositionAdjustment:verticalOffset forBarMetrics:UIBarMetricsDefault];
+  
   CGRect frame = self.navigationBar.frame;
   _shadowColor = [UIColorUtil darkerColorForColor:DEFAULT_NAVBG_COLOR];
 
