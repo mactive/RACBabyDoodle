@@ -27,4 +27,5 @@
 #import <Foundation/Foundation.h>
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import <Masonry/Masonry.h>
+#import "AppDef.h"
 #endif

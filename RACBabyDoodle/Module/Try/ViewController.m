@@ -22,6 +22,8 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   
+  self.title = @"BabyDoodle";
+  
   self.nameField = [[UITextField alloc] init];
   [self.nameField setBorderStyle:UITextBorderStyleLine];
   self.nameField.translatesAutoresizingMaskIntoConstraints = NO;

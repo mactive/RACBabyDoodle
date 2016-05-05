@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import "SRGViewController.h"
+#import "VaultNavigationController.h"
+
 @interface AppDelegate ()
 @property(nonatomic, strong)ViewController *viewController;
 @property(nonatomic, strong)SRGViewController *srgViewController;
@@ -22,10 +24,14 @@
   self.viewController  = [[ViewController alloc]initWithNibName:nil bundle:nil];
   self.srgViewController = [[SRGViewController alloc]init];
   
+  VaultNavigationController *popNavController = [[VaultNavigationController alloc]initWithRootViewController:self.viewController];
+
+  
+  
   self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
   self.window.backgroundColor = [UIColor whiteColor];
   
-  [self.window setRootViewController:self.srgViewController];
+  [self.window setRootViewController:popNavController];
   
   [self.window makeKeyAndVisible];
 
