@@ -30,7 +30,7 @@
     return [UIColor colorWithRed:MAX(r - 0.08, 0.0)
                            green:MAX(g - 0.08, 0.0)
                             blue:MAX(b - 0.08, 0.0)
-                           alpha:a];
+                           alpha:a]; 
   return nil;
 }
 

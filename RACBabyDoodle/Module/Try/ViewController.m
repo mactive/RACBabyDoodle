@@ -89,14 +89,37 @@
   }];
   
   
-  [self racAction];
-  [self coldSignal];
-  [self testRACLifting];
+//  [self racAction];
+//  [self coldSignal];
+//  [self testRACLifting];
+    [self endlessSignal];
   
   
   // Do any additional setup after loading the view, typically from a nib.
 }
 
+- (void)endlessSignal{
+    RACSignal *sigA = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        NSLog(@"Signal cretea");
+        [subscriber sendNext:@"first time"];
+        [subscriber sendNext:@"second time"];
+        [subscriber sendError:[NSError errorWithDomain:@"" code:404 userInfo:@{@"key":@"error info"}]];
+        [subscriber sendCompleted];
+        return nil;
+    }];
+    
+    [sigA subscribeCompleted:^{
+        NSLog(@"Subscribtion");
+    }];
+    
+    [sigA subscribeNext:^(id x) {
+        NSLog(@"%@",x);
+    } error:^(NSError *error) {
+        NSLog(@"%@",error);
+    } completed:^{
+        //
+    }];
+}
 -(void)testRACLifting
 {
   // A 暂停了2S

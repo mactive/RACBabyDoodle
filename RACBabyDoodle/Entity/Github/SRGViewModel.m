@@ -37,16 +37,6 @@
     
     RAC(self, users) = [sigMapped deliverOn:RACScheduler.mainThreadScheduler];
     
-    
-//    RAC(self,users) = [[[NSURLConnection rac_sendAsynchronousRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://api.github.com/users"]]] map:^id(RACTuple *value) {
-//      
-//      NSData *data = value.second;
-//      NSError *error = nil;
-//      NSArray *array = [NSJSONSerialization JSONObjectWithData:data
-//                                                       options:0
-//                                                         error:&error];
-//      return array;
-//    }] deliverOn:RACScheduler.mainThreadScheduler];
   }
   
   return self;
