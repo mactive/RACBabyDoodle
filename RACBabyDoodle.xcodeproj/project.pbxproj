@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		049ACA081CFD123F009EB31A /* NetworkingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 049ACA071CFD123F009EB31A /* NetworkingManager.m */; };
 		04B7CCE01CDABD8700BFE3CE /* VaultShapeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B7CCDE1CDABD8700BFE3CE /* VaultShapeView.m */; };
 		04B7CCE31CDAC59C00BFE3CE /* VaultNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B7CCE21CDAC59C00BFE3CE /* VaultNavigationController.m */; };
 		04B7CCE81CDAC90D00BFE3CE /* UIColorUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B7CCE71CDAC90D00BFE3CE /* UIColorUtil.m */; };
@@ -25,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		049ACA061CFD123F009EB31A /* NetworkingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NetworkingManager.h; path = RACBabyDoodle/Http/NetworkingManager.h; sourceTree = SOURCE_ROOT; };
+		049ACA071CFD123F009EB31A /* NetworkingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NetworkingManager.m; path = RACBabyDoodle/Http/NetworkingManager.m; sourceTree = SOURCE_ROOT; };
 		04B7CCDE1CDABD8700BFE3CE /* VaultShapeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VaultShapeView.m; sourceTree = "<group>"; };
 		04B7CCDF1CDABD8700BFE3CE /* VaultShapeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VaultShapeView.h; sourceTree = "<group>"; };
 		04B7CCE11CDAC59C00BFE3CE /* VaultNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VaultNavigationController.h; sourceTree = "<group>"; };
@@ -113,10 +116,10 @@
 		04ED62AB1CA6AAE5006712F1 = {
 			isa = PBXGroup;
 			children = (
+				04ED62B61CA6AAE5006712F1 /* RACBabyDoodle */,
 				A83DF8A3D1127473F2147E3A /* Frameworks */,
 				EC0765EE823FD11CC1F8740F /* Pods */,
 				04ED62B51CA6AAE5006712F1 /* Products */,
-				04ED62B61CA6AAE5006712F1 /* RACBabyDoodle */,
 			);
 			sourceTree = "<group>";
 		};
@@ -313,6 +316,8 @@
 		C2D37CE11CC0780300C60D5C /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				049ACA061CFD123F009EB31A /* NetworkingManager.h */,
+				049ACA071CFD123F009EB31A /* NetworkingManager.m */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -384,12 +389,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04ED62CE1CA6AAE5006712F1 /* Build configuration list for PBXNativeTarget "RACBabyDoodle" */;
 			buildPhases = (
-				E65B4CEC415582DA19F40D5B /* Check Pods Manifest.lock */,
+				E65B4CEC415582DA19F40D5B /* 📦 Check Pods Manifest.lock */,
 				04ED62B01CA6AAE5006712F1 /* Sources */,
 				04ED62B11CA6AAE5006712F1 /* Frameworks */,
 				04ED62B21CA6AAE5006712F1 /* Resources */,
-				628A25640EC9657670A8B102 /* Embed Pods Frameworks */,
-				72BB5D348E9EB29259D4C81F /* Copy Pods Resources */,
+				628A25640EC9657670A8B102 /* 📦 Embed Pods Frameworks */,
+				72BB5D348E9EB29259D4C81F /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -446,14 +451,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		628A25640EC9657670A8B102 /* Embed Pods Frameworks */ = {
+		628A25640EC9657670A8B102 /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "📦 Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -461,14 +466,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RACBabyDoodle/Pods-RACBabyDoodle-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		72BB5D348E9EB29259D4C81F /* Copy Pods Resources */ = {
+		72BB5D348E9EB29259D4C81F /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "📦 Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -476,14 +481,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RACBabyDoodle/Pods-RACBabyDoodle-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E65B4CEC415582DA19F40D5B /* Check Pods Manifest.lock */ = {
+		E65B4CEC415582DA19F40D5B /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -503,6 +508,7 @@
 				04B7CCE31CDAC59C00BFE3CE /* VaultNavigationController.m in Sources */,
 				C2317A091CC36AB200562C2C /* SRGViewController.m in Sources */,
 				C2D37CEB1CC0788900C60D5C /* SRGViewModel.m in Sources */,
+				049ACA081CFD123F009EB31A /* NetworkingManager.m in Sources */,
 				C2317A0D1CC36E8800562C2C /* SRGTableViewCell.m in Sources */,
 				C2D37CEE1CC078C700C60D5C /* SRGCellViewModel.m in Sources */,
 				04B7CCE81CDAC90D00BFE3CE /* UIColorUtil.m in Sources */,
