@@ -10,6 +10,8 @@
 #import "ViewController.h"
 #import "SRGViewController.h"
 #import "VaultNavigationController.h"
+#import "NetworkingManager.h"
+
 
 @interface AppDelegate ()
 @property(nonatomic, strong)ViewController *viewController;
@@ -26,6 +28,9 @@
   
   VaultNavigationController *popNavController = [[VaultNavigationController alloc]initWithRootViewController:self.viewController];
 
+    [[[NetworkingManager sharedManager] allDoodlesWithStart:0 end:20] subscribeNext:^(NSArray *doodles) {
+        NSLog(@"%@",doodles);
+    }];
   
   
   self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];

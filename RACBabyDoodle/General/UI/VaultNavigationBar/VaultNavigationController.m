@@ -61,6 +61,7 @@
 
   [self.navigationBar addSubview:customBGView];
   [self updateCustomNavigationView];
+
 }
 
 

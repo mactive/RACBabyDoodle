@@ -1,3 +1,7 @@
+## Json-server
+npm install -g json-server
+json-server --watch db.json --routes routes.json
+
 ## Mock API
 * http://localhost:3000/doodles?_start=0&_end=20
 * http://localhost:3000/doodles?tags=funny
