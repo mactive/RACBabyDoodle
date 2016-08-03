@@ -17,12 +17,12 @@
 @end
 
 @implementation SRGTableViewCell
-
+@synthesize viewModel;
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
   if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
-    self.viewModel = [SRGCellViewModel new];
+    self.viewModel = [[SRGCellViewModel alloc]init];
     [self initView];
 
     RAC(self,userpicImageView.image) = RACObserve(self, viewModel.image);
