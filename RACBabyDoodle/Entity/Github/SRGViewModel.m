@@ -15,7 +15,7 @@
 
 @implementation SRGViewModel
 
-//@synthesize users;
+@synthesize users;
 
 - (instancetype)init
 {
@@ -35,8 +35,7 @@
       return array;
     }];
     
-    RAC(self, users) = [sigMapped deliverOn:RACScheduler.mainThreadScheduler];
-    
+    RAC(self, self.users) = [sigMapped deliverOn:RACScheduler.mainThreadScheduler];
   }
   
   return self;
