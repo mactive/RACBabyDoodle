@@ -7,14 +7,16 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
-#import "SRGViewController.h"
+#import "SRGViewController.h" // github rac test
 #import "VaultNavigationController.h"
 #import "NetworkingManager.h"
 
+#import "ListDoodleViewContorller.h"
+
+
 
 @interface AppDelegate ()
-@property(nonatomic, strong)ViewController *viewController;
+@property(nonatomic, strong)ListDoodleViewContorller *viewController;
 @property(nonatomic, strong)SRGViewController *srgViewController;
 @end
 
@@ -23,10 +25,10 @@
 @synthesize viewController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    self.viewController  = [[ViewController alloc]initWithNibName:nil bundle:nil];
+    UICollectionViewFlowLayout *flowLayout =[[UICollectionViewFlowLayout alloc]init];
     
-    //github srgview done
-//  self.srgViewController = [[SRGViewController alloc]init];
+    flowLayout.itemSize = CGSizeMake(100, 100);
+    self.viewController  = [[ListDoodleViewContorller alloc] initWithCollectionViewLayout:flowLayout];
   
     VaultNavigationController *popNavController = [[VaultNavigationController alloc]initWithRootViewController:self.viewController];
 

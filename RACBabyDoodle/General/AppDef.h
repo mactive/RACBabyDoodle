@@ -17,6 +17,9 @@
 
 #define WHITECOLOR [UIColor colorWithRed:255.0f/255.0f green:255.0f/255.0f blue:255.0f/255.0f alpha:1]
 
+#define TOTAL_HEIGHT [[UIScreen mainScreen] bounds].size.height
+#define TOTAL_WIDTH [[UIScreen mainScreen] bounds].size.width
+
 
 NS_INLINE BOOL OSVersionIsAtLeastiOS7() {
   return (floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_6_1);

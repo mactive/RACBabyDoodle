@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0467EF081D52B9F200DED390 /* ListDoodleViewContorller.m in Sources */ = {isa = PBXBuildFile; fileRef = 0467EF071D52B9F200DED390 /* ListDoodleViewContorller.m */; };
+		0467EF0B1D52C6A400DED390 /* ListDoodleViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0467EF0A1D52C6A400DED390 /* ListDoodleViewCell.m */; };
+		0467EF0E1D52C6C700DED390 /* ListDoodleFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0467EF0D1D52C6C700DED390 /* ListDoodleFlowLayout.m */; };
 		049ACA081CFD123F009EB31A /* NetworkingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 049ACA071CFD123F009EB31A /* NetworkingManager.m */; };
 		04B7CCE01CDABD8700BFE3CE /* VaultShapeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B7CCDE1CDABD8700BFE3CE /* VaultShapeView.m */; };
 		04B7CCE31CDAC59C00BFE3CE /* VaultNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B7CCE21CDAC59C00BFE3CE /* VaultNavigationController.m */; };
@@ -29,6 +31,10 @@
 /* Begin PBXFileReference section */
 		0467EF061D52B9F200DED390 /* ListDoodleViewContorller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListDoodleViewContorller.h; sourceTree = "<group>"; };
 		0467EF071D52B9F200DED390 /* ListDoodleViewContorller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListDoodleViewContorller.m; sourceTree = "<group>"; };
+		0467EF091D52C6A400DED390 /* ListDoodleViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListDoodleViewCell.h; sourceTree = "<group>"; };
+		0467EF0A1D52C6A400DED390 /* ListDoodleViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListDoodleViewCell.m; sourceTree = "<group>"; };
+		0467EF0C1D52C6C700DED390 /* ListDoodleFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListDoodleFlowLayout.h; sourceTree = "<group>"; };
+		0467EF0D1D52C6C700DED390 /* ListDoodleFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListDoodleFlowLayout.m; sourceTree = "<group>"; };
 		049ACA061CFD123F009EB31A /* NetworkingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NetworkingManager.h; path = RACBabyDoodle/Http/NetworkingManager.h; sourceTree = SOURCE_ROOT; };
 		049ACA071CFD123F009EB31A /* NetworkingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NetworkingManager.m; path = RACBabyDoodle/Http/NetworkingManager.m; sourceTree = SOURCE_ROOT; };
 		04B7CCDE1CDABD8700BFE3CE /* VaultShapeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VaultShapeView.m; sourceTree = "<group>"; };
@@ -91,6 +97,10 @@
 			children = (
 				0467EF061D52B9F200DED390 /* ListDoodleViewContorller.h */,
 				0467EF071D52B9F200DED390 /* ListDoodleViewContorller.m */,
+				0467EF091D52C6A400DED390 /* ListDoodleViewCell.h */,
+				0467EF0A1D52C6A400DED390 /* ListDoodleViewCell.m */,
+				0467EF0C1D52C6C700DED390 /* ListDoodleFlowLayout.h */,
+				0467EF0D1D52C6C700DED390 /* ListDoodleFlowLayout.m */,
 			);
 			path = ListDoodle;
 			sourceTree = "<group>";
@@ -518,7 +528,9 @@
 				C2317A0D1CC36E8800562C2C /* SRGTableViewCell.m in Sources */,
 				C2D37CEE1CC078C700C60D5C /* SRGCellViewModel.m in Sources */,
 				04B7CCE81CDAC90D00BFE3CE /* UIColorUtil.m in Sources */,
+				0467EF0E1D52C6C700DED390 /* ListDoodleFlowLayout.m in Sources */,
 				04B7CCE01CDABD8700BFE3CE /* VaultShapeView.m in Sources */,
+				0467EF0B1D52C6A400DED390 /* ListDoodleViewCell.m in Sources */,
 				C26D81301CBF272200B4E053 /* ViewController.m in Sources */,
 				04ED62B91CA6AAE5006712F1 /* main.m in Sources */,
 			);
