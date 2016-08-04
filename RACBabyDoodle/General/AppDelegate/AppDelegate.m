@@ -25,10 +25,8 @@
 @synthesize viewController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    UICollectionViewFlowLayout *flowLayout =[[UICollectionViewFlowLayout alloc]init];
     
-    flowLayout.itemSize = CGSizeMake(100, 100);
-    self.viewController  = [[ListDoodleViewContorller alloc] initWithCollectionViewLayout:flowLayout];
+    self.viewController  = [[ListDoodleViewContorller alloc] init];
   
     VaultNavigationController *popNavController = [[VaultNavigationController alloc]initWithRootViewController:self.viewController];
 

@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseUIViewController.h"
 
-@interface ListDoodleViewContorller : UICollectionViewController
+@interface ListDoodleViewContorller : BaseUIViewController
 
 @end

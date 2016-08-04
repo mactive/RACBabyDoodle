@@ -10,9 +10,10 @@
 #import "ListDoodleViewCell.h"
 #import "ListDoodleFlowLayout.h"
 
-@interface ListDoodleViewContorller()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
+@interface ListDoodleViewContorller()<UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 
 @property(nonatomic, strong)UICollectionView *theCollectionView;
+
 
 @end
 
@@ -43,10 +44,11 @@
 
     theCollectionView.delegate = self;
     theCollectionView.dataSource = self;
+    
+    [theCollectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"MyCell"];
+    
     theCollectionView.backgroundColor = [UIColor blueColor];
     
-    [theCollectionView registerClass:[UICollectionView class]
-            forCellWithReuseIdentifier:@"MyCell"];
     
     [self.view addSubview:theCollectionView];
 
@@ -56,22 +58,26 @@
     return 1;
 }
 
--(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return 100;
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return 15;
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"MyCell" forIndexPath:indexPath];
+    
+    cell.backgroundColor = [UIColor greenColor];
+
     return cell;
 
 }
 
-//-(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
-//    CGFloat height=100+(arc4random()%100);
-//    return  CGSizeMake(100, height);
-//}
 
+//- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    return CGSizeMake(50, 50);
+//}
 
 
 

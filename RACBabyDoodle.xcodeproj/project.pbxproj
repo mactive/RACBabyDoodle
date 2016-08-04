@@ -19,6 +19,7 @@
 		04ED62C51CA6AAE5006712F1 /* RACBabyDoodle.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04ED62C31CA6AAE5006712F1 /* RACBabyDoodle.xcdatamodeld */; };
 		04ED62C71CA6AAE5006712F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04ED62C61CA6AAE5006712F1 /* Assets.xcassets */; };
 		04ED62CA1CA6AAE5006712F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04ED62C81CA6AAE5006712F1 /* LaunchScreen.storyboard */; };
+		C22E8BA61D52EE3F0065139B /* BaseUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C22E8BA51D52EE3F0065139B /* BaseUIViewController.m */; };
 		C2317A091CC36AB200562C2C /* SRGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2317A081CC36AB200562C2C /* SRGViewController.m */; };
 		C2317A0D1CC36E8800562C2C /* SRGTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2317A0C1CC36E8800562C2C /* SRGTableViewCell.m */; };
 		C26D812B1CBF26BA00B4E053 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C26D81261CBF26BA00B4E053 /* AppDelegate.m */; };
@@ -53,6 +54,8 @@
 		04ED62CB1CA6AAE5006712F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		41E4B0B2325072798B6A7F00 /* Pods-RACBabyDoodle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACBabyDoodle.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RACBabyDoodle/Pods-RACBabyDoodle.debug.xcconfig"; sourceTree = "<group>"; };
 		C1887B21F4C2E92FF0360EE6 /* Pods-RACBabyDoodle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACBabyDoodle.release.xcconfig"; path = "Pods/Target Support Files/Pods-RACBabyDoodle/Pods-RACBabyDoodle.release.xcconfig"; sourceTree = "<group>"; };
+		C22E8BA41D52EE3F0065139B /* BaseUIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseUIViewController.h; path = Common/BaseUIViewController.h; sourceTree = "<group>"; };
+		C22E8BA51D52EE3F0065139B /* BaseUIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseUIViewController.m; path = Common/BaseUIViewController.m; sourceTree = "<group>"; };
 		C2317A071CC36AB200562C2C /* SRGViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRGViewController.h; sourceTree = "<group>"; };
 		C2317A081CC36AB200562C2C /* SRGViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRGViewController.m; sourceTree = "<group>"; };
 		C2317A0A1CC36B4100562C2C /* RACBabyDoodle-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RACBabyDoodle-Prefix.pch"; sourceTree = "<group>"; };
@@ -184,6 +187,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C22E8BA31D52EE110065139B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				C22E8BA41D52EE3F0065139B /* BaseUIViewController.h */,
+				C22E8BA51D52EE3F0065139B /* BaseUIViewController.m */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
 		C26D81231CBF26BA00B4E053 /* General */ = {
 			isa = PBXGroup;
 			children = (
@@ -238,6 +250,7 @@
 		C26D812C1CBF272200B4E053 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				C22E8BA31D52EE110065139B /* Common */,
 				C2D37CE61CC0781600C60D5C /* Github */,
 				04B7CCDB1CDABBF500BFE3CE /* ListDoodle */,
 				04B7CCDC1CDABC0500BFE3CE /* PlayDoodle */,
@@ -404,12 +417,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04ED62CE1CA6AAE5006712F1 /* Build configuration list for PBXNativeTarget "RACBabyDoodle" */;
 			buildPhases = (
-				E65B4CEC415582DA19F40D5B /* 📦 Check Pods Manifest.lock */,
+				E65B4CEC415582DA19F40D5B /* [CP] Check Pods Manifest.lock */,
 				04ED62B01CA6AAE5006712F1 /* Sources */,
 				04ED62B11CA6AAE5006712F1 /* Frameworks */,
 				04ED62B21CA6AAE5006712F1 /* Resources */,
-				628A25640EC9657670A8B102 /* 📦 Embed Pods Frameworks */,
-				72BB5D348E9EB29259D4C81F /* 📦 Copy Pods Resources */,
+				628A25640EC9657670A8B102 /* [CP] Embed Pods Frameworks */,
+				72BB5D348E9EB29259D4C81F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -466,14 +479,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		628A25640EC9657670A8B102 /* 📦 Embed Pods Frameworks */ = {
+		628A25640EC9657670A8B102 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -481,14 +494,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RACBabyDoodle/Pods-RACBabyDoodle-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		72BB5D348E9EB29259D4C81F /* 📦 Copy Pods Resources */ = {
+		72BB5D348E9EB29259D4C81F /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -496,14 +509,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RACBabyDoodle/Pods-RACBabyDoodle-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E65B4CEC415582DA19F40D5B /* 📦 Check Pods Manifest.lock */ = {
+		E65B4CEC415582DA19F40D5B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -527,6 +540,7 @@
 				049ACA081CFD123F009EB31A /* NetworkingManager.m in Sources */,
 				C2317A0D1CC36E8800562C2C /* SRGTableViewCell.m in Sources */,
 				C2D37CEE1CC078C700C60D5C /* SRGCellViewModel.m in Sources */,
+				C22E8BA61D52EE3F0065139B /* BaseUIViewController.m in Sources */,
 				04B7CCE81CDAC90D00BFE3CE /* UIColorUtil.m in Sources */,
 				0467EF0E1D52C6C700DED390 /* ListDoodleFlowLayout.m in Sources */,
 				04B7CCE01CDABD8700BFE3CE /* VaultShapeView.m in Sources */,
