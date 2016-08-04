@@ -23,25 +23,27 @@
 @synthesize viewController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-  self.viewController  = [[ViewController alloc]initWithNibName:nil bundle:nil];
-  self.srgViewController = [[SRGViewController alloc]init];
+    self.viewController  = [[ViewController alloc]initWithNibName:nil bundle:nil];
+    
+    //github srgview done
+//  self.srgViewController = [[SRGViewController alloc]init];
   
-  VaultNavigationController *popNavController = [[VaultNavigationController alloc]initWithRootViewController:self.viewController];
+    VaultNavigationController *popNavController = [[VaultNavigationController alloc]initWithRootViewController:self.viewController];
 
     [[[NetworkingManager sharedManager] allDoodlesWithStart:0 end:20] subscribeNext:^(NSArray *doodles) {
         NSLog(@"%@",doodles);
     }];
   
   
-  self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-  self.window.backgroundColor = [UIColor whiteColor];
-  
-  [self.window setRootViewController:popNavController];
-  
-  [self.window makeKeyAndVisible];
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
 
-  // Override point for customization after application launch.
-  return YES;
+    [self.window setRootViewController:popNavController];
+
+    [self.window makeKeyAndVisible];
+
+    // Override point for customization after application launch.
+    return YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

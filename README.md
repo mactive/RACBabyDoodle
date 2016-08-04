@@ -1,3 +1,6 @@
+## 动态高度
+flowLayout 高度有个固定的算法, 让看上去比较错落有致.不能使用随机.要不每次都会刷新
+
 ## Json-server
 npm install -g json-server
 json-server --watch db.json --routes routes.json

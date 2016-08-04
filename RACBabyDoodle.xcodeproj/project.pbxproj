@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0467EF081D52B9F200DED390 /* ListDoodleViewContorller.m in Sources */ = {isa = PBXBuildFile; fileRef = 0467EF071D52B9F200DED390 /* ListDoodleViewContorller.m */; };
 		049ACA081CFD123F009EB31A /* NetworkingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 049ACA071CFD123F009EB31A /* NetworkingManager.m */; };
 		04B7CCE01CDABD8700BFE3CE /* VaultShapeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B7CCDE1CDABD8700BFE3CE /* VaultShapeView.m */; };
 		04B7CCE31CDAC59C00BFE3CE /* VaultNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B7CCE21CDAC59C00BFE3CE /* VaultNavigationController.m */; };
@@ -26,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0467EF061D52B9F200DED390 /* ListDoodleViewContorller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListDoodleViewContorller.h; sourceTree = "<group>"; };
+		0467EF071D52B9F200DED390 /* ListDoodleViewContorller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListDoodleViewContorller.m; sourceTree = "<group>"; };
 		049ACA061CFD123F009EB31A /* NetworkingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NetworkingManager.h; path = RACBabyDoodle/Http/NetworkingManager.h; sourceTree = SOURCE_ROOT; };
 		049ACA071CFD123F009EB31A /* NetworkingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NetworkingManager.m; path = RACBabyDoodle/Http/NetworkingManager.m; sourceTree = SOURCE_ROOT; };
 		04B7CCDE1CDABD8700BFE3CE /* VaultShapeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VaultShapeView.m; sourceTree = "<group>"; };
@@ -86,6 +89,8 @@
 		04B7CCDB1CDABBF500BFE3CE /* ListDoodle */ = {
 			isa = PBXGroup;
 			children = (
+				0467EF061D52B9F200DED390 /* ListDoodleViewContorller.h */,
+				0467EF071D52B9F200DED390 /* ListDoodleViewContorller.m */,
 			);
 			path = ListDoodle;
 			sourceTree = "<group>";
@@ -508,6 +513,7 @@
 				04B7CCE31CDAC59C00BFE3CE /* VaultNavigationController.m in Sources */,
 				C2317A091CC36AB200562C2C /* SRGViewController.m in Sources */,
 				C2D37CEB1CC0788900C60D5C /* SRGViewModel.m in Sources */,
+				0467EF081D52B9F200DED390 /* ListDoodleViewContorller.m in Sources */,
 				049ACA081CFD123F009EB31A /* NetworkingManager.m in Sources */,
 				C2317A0D1CC36E8800562C2C /* SRGTableViewCell.m in Sources */,
 				C2D37CEE1CC078C700C60D5C /* SRGCellViewModel.m in Sources */,
