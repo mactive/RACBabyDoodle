@@ -11,5 +11,6 @@
 @interface ListDoodleFlowLayout : UICollectionViewFlowLayout
 // 总列数
 @property (nonatomic, assign) NSInteger columnCount;
+@property (nonatomic, assign) NSInteger count;
 
 @end

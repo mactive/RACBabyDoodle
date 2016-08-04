@@ -31,14 +31,9 @@
 {
     [super viewDidLoad];
 
-    UICollectionViewFlowLayout *flowLayout =[[UICollectionViewFlowLayout alloc]init];
-
-    flowLayout.itemSize = CGSizeMake(100, 100);
-    [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
-    [flowLayout setMinimumInteritemSpacing:1.0f];
-    [flowLayout setMinimumLineSpacing:2.0f];
-
-    
+    ListDoodleFlowLayout *flowLayout =[[ListDoodleFlowLayout alloc]init];
+    flowLayout.columnCount = 3;
+    flowLayout.count  = 20;
 
     theCollectionView = [[UICollectionView alloc]initWithFrame:self.view.frame collectionViewLayout:flowLayout];
 
@@ -60,7 +55,7 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 15;
+    return 20;
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
