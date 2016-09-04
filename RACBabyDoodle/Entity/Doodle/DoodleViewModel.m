@@ -30,7 +30,9 @@
         return doodleId != nil;
     }] subscribeNext:^(id x) {
         @strongify(self);
-        [self.loadDoodleCommand execute:dict];
+        [[self.loadDoodleCommand execute:dict] subscribeNext:^(id x) {
+            NSLog(@"%@",x);
+        }];
     }];
     return self;
 }
@@ -50,20 +52,10 @@
             [subscriber sendNext:@(YES)];
             [subscriber sendCompleted];
             
-            return nil;
+            return [RACDisposable disposableWithBlock:^{
+                NSLog(@"_loadDoodleCommand dispose");
+            }];
         }];
-        
-//        RACSignal *sig = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-//            return [RACDisposable disposableWithBlock:^{
-//                @strongify(self);
-//
-//                self.doodleId = input[@"doodleId"];
-//                self.guid = input[@"guid"];
-//                
-//                [subscriber sendNext:@(YES)];
-//                [subscriber sendCompleted];
-//            }];
-//        }];
         return sig;
     }];
     return _loadDoodleCommand;

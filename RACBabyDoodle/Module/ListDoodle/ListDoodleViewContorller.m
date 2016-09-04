@@ -15,12 +15,14 @@
 @interface ListDoodleViewContorller()<UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 
 @property(nonatomic, strong)UICollectionView *theCollectionView;
+@property(nonatomic, strong)NSMutableArray *dataSource;
 
 
 @end
 
 @implementation ListDoodleViewContorller
 @synthesize theCollectionView;
+@synthesize dataSource;
 
 - (id)init{
     if(self = [super init]){
@@ -32,33 +34,38 @@
 -(void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    dataSource = [[NSMutableArray alloc]init];
+
     [[[NetworkingManager sharedManager] allDoodlesWithStart:0 end:20] subscribeNext:^(NSArray *doodles) {
         NSLog(@"%@",doodles);
-        NSMutableArray *dataSource = [[NSMutableArray alloc]init];
         for (NSDictionary* dict in doodles) {
             DoodleViewModel *viewModel = [[DoodleViewModel alloc] initWithDict:dict];
             [dataSource addObject:viewModel];
         }
-        NSLog(@"%@",dataSource);
+        
+        ListDoodleFlowLayout *flowLayout =[[ListDoodleFlowLayout alloc]init];
+        flowLayout.columnCount = 2;
+        flowLayout.count  = [dataSource count];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [theCollectionView.collectionViewLayout invalidateLayout];
+            [theCollectionView setCollectionViewLayout:flowLayout animated:YES];
+            [theCollectionView reloadData];
+        });      
     }];
+    
+    UICollectionViewLayout *flowLayout =[[UICollectionViewLayout alloc]init];
 
-    ListDoodleFlowLayout *flowLayout =[[ListDoodleFlowLayout alloc]init];
-    flowLayout.columnCount = 2;
-    flowLayout.count  = 20;
-
-    theCollectionView = [[UICollectionView alloc]initWithFrame:self.view.frame collectionViewLayout:flowLayout];
-
+    theCollectionView = [[UICollectionView alloc] initWithFrame:self.view.frame collectionViewLayout:flowLayout];
+    
     theCollectionView.delegate = self;
     theCollectionView.dataSource = self;
     
-    [theCollectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"MyCell"];
+    [theCollectionView registerClass:[ListDoodleViewCell class] forCellWithReuseIdentifier:@"MyCell"];
     
     theCollectionView.backgroundColor = [UIColor whiteColor];
     
-    
     [self.view addSubview:theCollectionView];
-
 }
 
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
@@ -67,24 +74,24 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 20;
+    return [self.dataSource count];
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"MyCell" forIndexPath:indexPath];
+    ListDoodleViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"MyCell" forIndexPath:indexPath];
+    if(cell == nil)
+    {
+        cell = [[ListDoodleViewCell alloc] init];
+    }
     
-    cell.backgroundColor = [UIColor greenColor];
+    cell.viewModel = [self.dataSource objectAtIndex:indexPath.row];
 
     return cell;
 
 }
 
 
-//- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    return CGSizeMake(50, 50);
-//}
 
 
 

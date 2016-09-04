@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+@class DoodleViewModel;
 
 @interface ListDoodleViewCell : UICollectionViewCell
+@property(nonatomic, strong) DoodleViewModel *viewModel;
 
 @end
