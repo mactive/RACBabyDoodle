@@ -24,6 +24,7 @@
 		C2317A0D1CC36E8800562C2C /* SRGTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2317A0C1CC36E8800562C2C /* SRGTableViewCell.m */; };
 		C26D812B1CBF26BA00B4E053 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C26D81261CBF26BA00B4E053 /* AppDelegate.m */; };
 		C26D81301CBF272200B4E053 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C26D812F1CBF272200B4E053 /* ViewController.m */; };
+		C2A696D71D7BE39A0008C6FB /* DoodleViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A696D61D7BE39A0008C6FB /* DoodleViewModel.m */; };
 		C2D37CEB1CC0788900C60D5C /* SRGViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D37CEA1CC0788900C60D5C /* SRGViewModel.m */; };
 		C2D37CEE1CC078C700C60D5C /* SRGCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D37CED1CC078C700C60D5C /* SRGCellViewModel.m */; };
 		FECF661AFC4917C1899C4911 /* Pods_RACBabyDoodle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEA03EFFD5868452D8A3A925 /* Pods_RACBabyDoodle.framework */; };
@@ -65,6 +66,8 @@
 		C26D81261CBF26BA00B4E053 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		C26D812E1CBF272200B4E053 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		C26D812F1CBF272200B4E053 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C2A696D51D7BE39A0008C6FB /* DoodleViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DoodleViewModel.h; path = Doodle/DoodleViewModel.h; sourceTree = "<group>"; };
+		C2A696D61D7BE39A0008C6FB /* DoodleViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DoodleViewModel.m; path = Doodle/DoodleViewModel.m; sourceTree = "<group>"; };
 		C2D37CE91CC0788900C60D5C /* SRGViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRGViewModel.h; sourceTree = "<group>"; };
 		C2D37CEA1CC0788900C60D5C /* SRGViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRGViewModel.m; sourceTree = "<group>"; };
 		C2D37CEC1CC078C700C60D5C /* SRGCellViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRGCellViewModel.h; sourceTree = "<group>"; };
@@ -269,6 +272,15 @@
 			path = Try;
 			sourceTree = "<group>";
 		};
+		C2A696D41D7BE37D0008C6FB /* Doodle */ = {
+			isa = PBXGroup;
+			children = (
+				C2A696D51D7BE39A0008C6FB /* DoodleViewModel.h */,
+				C2A696D61D7BE39A0008C6FB /* DoodleViewModel.m */,
+			);
+			name = Doodle;
+			sourceTree = "<group>";
+		};
 		C2D37CD81CC0780300C60D5C /* Util */ = {
 			isa = PBXGroup;
 			children = (
@@ -374,6 +386,7 @@
 		C2D37CE51CC0780300C60D5C /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				C2A696D41D7BE37D0008C6FB /* Doodle */,
 				C2D37CE71CC0782500C60D5C /* Github */,
 			);
 			path = Entity;
@@ -539,6 +552,7 @@
 				0467EF081D52B9F200DED390 /* ListDoodleViewContorller.m in Sources */,
 				049ACA081CFD123F009EB31A /* NetworkingManager.m in Sources */,
 				C2317A0D1CC36E8800562C2C /* SRGTableViewCell.m in Sources */,
+				C2A696D71D7BE39A0008C6FB /* DoodleViewModel.m in Sources */,
 				C2D37CEE1CC078C700C60D5C /* SRGCellViewModel.m in Sources */,
 				C22E8BA61D52EE3F0065139B /* BaseUIViewController.m in Sources */,
 				04B7CCE81CDAC90D00BFE3CE /* UIColorUtil.m in Sources */,

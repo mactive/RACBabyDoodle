@@ -57,7 +57,7 @@ static NSString * const kBaseURL = @"http://localhost:3000";
 
 
 
-- (RACSignal *) detailsWithIdentity:(NSString *)identity{
+- (RACSignal *)detailsWithIdentity:(NSString *)identity{
     NSDictionary *parameters = @{@"id": STR(identity)};
     RACSignal *sig = [[self rac_GET:@"/details" parameters:parameters] reduceEach:^id
                       (AFHTTPRequestOperation *op, NSString *response){
@@ -66,7 +66,7 @@ static NSString * const kBaseURL = @"http://localhost:3000";
     return [sig deliverOn:[RACScheduler schedulerWithPriority:RACSchedulerPriorityBackground]];
 }
 
-- (RACSignal *) searchDoodlesWithKeyword:(NSString *)keyword
+- (RACSignal *)searchDoodlesWithKeyword:(NSString *)keyword
 {
     NSDictionary *parameters = @{@"keyword": STR(keyword)};
     RACSignal *sig = [[self rac_GET:@"/search" parameters:parameters] reduceEach:^id

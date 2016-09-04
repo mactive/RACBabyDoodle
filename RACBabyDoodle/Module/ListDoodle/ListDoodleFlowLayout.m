@@ -89,7 +89,6 @@
 
     self.layoutAttributesArray = [attributesArray copy];
 
-
 }
 
 //用来在一开始给出一套UICollectionViewLayoutAttributes

@@ -29,10 +29,6 @@
     self.viewController  = [[ListDoodleViewContorller alloc] init];
   
     VaultNavigationController *popNavController = [[VaultNavigationController alloc]initWithRootViewController:self.viewController];
-
-    [[[NetworkingManager sharedManager] allDoodlesWithStart:0 end:20] subscribeNext:^(NSArray *doodles) {
-        NSLog(@"%@",doodles);
-    }];
   
   
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];

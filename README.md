@@ -1,5 +1,6 @@
 ## 动态高度
 flowLayout 高度有个固定的算法, 让看上去比较错落有致.不能使用随机.要不每次都会刷新
+接口中返回图片宽高,这边做缩放, 如果提高性能,将attrArray做缓存.而不是每次有数据了重新算
 
 ## Json-server
 npm install -g json-server

@@ -9,6 +9,8 @@
 #import "ListDoodleViewContorller.h"
 #import "ListDoodleViewCell.h"
 #import "ListDoodleFlowLayout.h"
+#import "NetworkingManager.h"
+#import "DoodleViewModel.h"
 
 @interface ListDoodleViewContorller()<UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 
@@ -30,6 +32,16 @@
 -(void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [[[NetworkingManager sharedManager] allDoodlesWithStart:0 end:20] subscribeNext:^(NSArray *doodles) {
+        NSLog(@"%@",doodles);
+        NSMutableArray *dataSource = [[NSMutableArray alloc]init];
+        for (NSDictionary* dict in doodles) {
+            DoodleViewModel *viewModel = [[DoodleViewModel alloc] initWithDict:dict];
+            [dataSource addObject:viewModel];
+        }
+        NSLog(@"%@",dataSource);
+    }];
 
     ListDoodleFlowLayout *flowLayout =[[ListDoodleFlowLayout alloc]init];
     flowLayout.columnCount = 2;
