@@ -32,7 +32,7 @@
     [super viewDidLoad];
 
     ListDoodleFlowLayout *flowLayout =[[ListDoodleFlowLayout alloc]init];
-    flowLayout.columnCount = 3;
+    flowLayout.columnCount = 2;
     flowLayout.count  = 20;
 
     theCollectionView = [[UICollectionView alloc]initWithFrame:self.view.frame collectionViewLayout:flowLayout];
@@ -42,7 +42,7 @@
     
     [theCollectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"MyCell"];
     
-    theCollectionView.backgroundColor = [UIColor blueColor];
+    theCollectionView.backgroundColor = [UIColor whiteColor];
     
     
     [self.view addSubview:theCollectionView];
