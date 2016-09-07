@@ -42,6 +42,7 @@
     // 初始化
     for (int i = 0; i < self.columnCount; i++) {
         columnHeight[i] = self.sectionInset.top;
+        // 做出左右初始高度差 为了视觉效果
         if(i % 2 != 0){
             columnHeight[i] = columnHeight[i] + 35;
         }
@@ -70,7 +71,8 @@
         // 等比例缩放 计算item的高度
         // 这一步目前没有 因为 我们高度是个默认值,但最好也是从数据里拿
 //        CGFloat itemH = good.h * itemWidth / good.w;
-        CGFloat itemH = 70;
+        // TODO:
+        CGFloat itemH = itemWidth;
 
         attributes.frame = CGRectMake(itemX, itemY, itemWidth, itemH);
         [attributesArray addObject:attributes];

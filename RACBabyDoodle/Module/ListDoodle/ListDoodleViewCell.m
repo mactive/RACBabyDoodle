@@ -18,20 +18,41 @@
 @implementation ListDoodleViewCell
 @synthesize viewModel;
 
+
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if(self){
-        _mainView  = [[UIView alloc]initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)];
+        // rand 0.5 - 1
+        CGFloat scale = [self randomBetweenSmall:0.8 big:1.0];
+        CGFloat startX = frame.size.width * (1 - scale) / 2;
+        CGFloat width = frame.size.width * scale;
+
+        CGRect mainViewFrame = CGRectMake(startX, startX, width, width);
+        
+        _mainView  = [[UIView alloc]initWithFrame:mainViewFrame];
         _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 200, 20)];
         _avatarView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 20, 40, 40)];
         [self addSubview:_mainView];
         [_mainView addSubview:_titleLabel];
         [_mainView addSubview:_avatarView];
         _mainView.backgroundColor = [UIColor greenColor];
-        [self makeMaskWithFrame:frame];
+        
+//        [self makeMaskWithFrame:frame];
+        
+        _mainView.layer.borderWidth = 2.0f;
+        _mainView.layer.borderColor = [UIColor blueColor].CGColor;
+        _mainView.layer.cornerRadius = width / 2;
+        _mainView.layer.masksToBounds = YES;
     }
     return self;
+}
+
+// 大小随机数发生器
+-(CGFloat)randomBetweenSmall:(CGFloat)smallNumber big:(CGFloat)bigNumber
+{
+    float diff = bigNumber - smallNumber;
+    return (((float) rand() / RAND_MAX) * diff) + smallNumber;
 }
 
 -(void)setViewModel:(DoodleViewModel *)_viewModel
