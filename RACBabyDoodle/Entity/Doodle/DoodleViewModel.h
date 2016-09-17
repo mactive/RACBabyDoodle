@@ -22,7 +22,7 @@
 @property(nonatomic, readonly) NSString *zhName;
 @property(nonatomic, readonly) NSArray *tags;
 @property(nonatomic, readonly) NSString *packageZip;
-@property(nonatomic, readonly) UIImage *cover;
+@property(nonatomic, readonly) NSString *cover;
 @property(nonatomic, readonly) UIColor *color;
 
 @property(nonatomic, readonly) NSDate *createAt;

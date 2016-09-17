@@ -12,16 +12,15 @@
 
 @interface DoodleViewModel()
 @property(nonatomic, strong)RACCommand *loadDoodleCommand;
-@property(nonatomic, copy)NSDictionary *theDict;
 @property(nonatomic, strong) NSString *doodleId;
 @property(nonatomic, strong) NSString *guid;
 @property(nonatomic, strong) UIColor *color;
+@property(nonatomic, strong) NSString *cover;
 
 @property(nonatomic, strong) NSString *name;
 @property(nonatomic, strong) NSString *zhName;
 @property(nonatomic, strong) NSArray *tags;
 @property(nonatomic, strong) NSString *packageZip;
-@property(nonatomic, strong) UIImage *cover;
 
 @property(nonatomic, strong) NSDate *createAt;
 @property(nonatomic, strong) NSDate *updateAt;
@@ -59,10 +58,19 @@
         @strongify(self);
         RACSignal *sig = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
             /* 具体的数值转换 */
-            self.doodleId = input[@"doodleId"];
-            self.guid = input[@"guid"];
-            self.color = [UIColor colorWithCSS:input[@"color"]];
-
+            self.doodleId = [DataTrans noNullStringObj:input[@"doodleId"]];
+            self.guid = [DataTrans noNullStringObj:input[@"guid"]];
+            self.color = [UIColor colorWithCSS:[DataTrans noNullStringObj:input[@"color"]]];
+            self.cover = [DataTrans noNullStringObj:input[@"cover"]];
+            
+            self.name = [DataTrans noNullStringObj:input[@"name"]];
+            self.zhName = [DataTrans noNullStringObj:input[@"zhName"]];
+            self.packageZip = [DataTrans noNullStringObj:input[@"packageZip"]];
+            self.tags = [[DataTrans noNullStringObj:input[@"tags"]] componentsSeparatedByString:@","];
+            
+            self.createAt = [DataTrans dateFromNSDatetimeStr:input[@"createAt"]];
+            self.updateAt = [DataTrans dateFromNSDatetimeStr:input[@"updateAt"]];
+            
             [subscriber sendNext:@(YES)];
             [subscriber sendCompleted];
             

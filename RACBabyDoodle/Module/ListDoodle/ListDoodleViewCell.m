@@ -8,11 +8,14 @@
 
 #import "ListDoodleViewCell.h"
 #import "DoodleViewModel.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+
 
 @interface ListDoodleViewCell()
 @property(nonatomic, strong)UIView *mainView;
 @property(nonatomic, strong)UILabel *titleLabel;
 @property(nonatomic, strong)UIImageView *avatarView;
+@property(nonatomic, assign)CGRect frame;
 @end
 
 @implementation ListDoodleViewCell
@@ -29,21 +32,18 @@
         CGFloat width = frame.size.width * scale;
 
         CGRect mainViewFrame = CGRectMake(startX, startX, width, width);
-        
+        self.frame = mainViewFrame;
+
         _mainView  = [[UIView alloc]initWithFrame:mainViewFrame];
-        _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 200, 20)];
-        _avatarView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 20, 40, 40)];
+        _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, width-40, width , 40)];
+        _avatarView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, width, width)];
         [self addSubview:_mainView];
-        [_mainView addSubview:_titleLabel];
         [_mainView addSubview:_avatarView];
-        _mainView.backgroundColor = [UIColor greenColor];
-        
-//        [self makeMaskWithFrame:frame];
-        
-        _mainView.layer.borderWidth = 2.0f;
-        _mainView.layer.borderColor = [UIColor blueColor].CGColor;
+        [_mainView addSubview:_titleLabel];
+        _titleLabel.textAlignment = NSTextAlignmentCenter;
         _mainView.layer.cornerRadius = width / 2;
         _mainView.layer.masksToBounds = YES;
+
     }
     return self;
 }
@@ -57,10 +57,17 @@
 
 -(void)setViewModel:(DoodleViewModel *)_viewModel
 {
-    _titleLabel.text = _viewModel.doodleId;
+    _titleLabel.text = _viewModel.name;
+    [_avatarView sd_setImageWithURL:[NSURL URLWithString:_viewModel.cover] placeholderImage:nil];
+    _mainView.backgroundColor = _viewModel.color;
+    _titleLabel.backgroundColor = _viewModel.color;
+    _titleLabel.textColor = WHITECOLOR;
+
+    [self makeMaskWithFrame:self.frame withViewModel:_viewModel];
+
 }
 
--(void)makeMaskWithFrame:(CGRect)frame
+-(void)makeMaskWithFrame:(CGRect)frame withViewModel:(DoodleViewModel *)_viewModel
 {
     // Create a mask layer and the frame to determine what will be visible in the view.
     CAShapeLayer *maskLayer = [[CAShapeLayer alloc] init];
@@ -80,7 +87,7 @@
     // Set the mask of the view.
     _mainView.layer.mask = maskLayer;
     _mainView.layer.borderWidth = 2.0f;
-    _mainView.layer.borderColor = [UIColor blueColor].CGColor;
+    _mainView.layer.borderColor = _viewModel.color.CGColor;
     // 方向
     // 尝试用去 圆角矩形去实现 一个圆形  borderRadius 而不是 mask了
 }

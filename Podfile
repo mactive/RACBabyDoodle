@@ -11,5 +11,6 @@ target 'RACBabyDoodle' do
 	pod 'Mixpanel', '~> 2.9.4'
 	pod 'Masonry'
 	pod 'UIColor+Hex'
+	pod 'SDWebImage', '~>3.8'
 end
 
