@@ -9,6 +9,7 @@
       "cover": "http://placehold.it/256x256",
       "name": "Key",
       "zhName": "Garrison",
+      "color": "#75BA56",
       "doodleId": "570858f9c14954e756ef4570"
     },
     {
@@ -20,6 +21,7 @@
       "cover": "http://placehold.it/256x256",
       "name": "Gonzalez",
       "zhName": "Spears",
+      "color": "#6FC0F6",
       "doodleId": "570858f9d8f85b7bc96818c7"
     },
     {
@@ -31,6 +33,7 @@
       "cover": "http://placehold.it/256x256",
       "name": "Horton",
       "zhName": "Carolyn",
+      "color": "#FFD677",
       "doodleId": "570858f909ced4afcf8cb911"
     },
     {
@@ -42,6 +45,7 @@
       "cover": "http://placehold.it/256x256",
       "name": "Gonzales",
       "zhName": "Juliette",
+      "color": "#FBA5AB",
       "doodleId": "570858f93c5f8700b33f1d55"
     },
     {
@@ -53,6 +57,7 @@
       "cover": "http://placehold.it/256x256",
       "name": "Cervantes",
       "zhName": "Ward",
+      "color": "#9B9B9B",
       "doodleId": "570858f999ee3a90f3e993f3"
     },
     {
@@ -64,6 +69,7 @@
       "cover": "http://placehold.it/256x256",
       "name": "Key",
       "zhName": "Garrison",
+      "color": "#96D778",
       "doodleId": "570858f9c14954e756ef4570"
     },
     {
@@ -75,6 +81,7 @@
       "cover": "http://placehold.it/256x256",
       "name": "Gonzalez",
       "zhName": "Spears",
+      "color": "#96D778",
       "doodleId": "570858f9d8f85b7bc96818c7"
     },
     {
@@ -86,6 +93,7 @@
       "cover": "http://placehold.it/256x256",
       "name": "Horton",
       "zhName": "Carolyn",
+      "color": "#9B9B9B",
       "doodleId": "570858f909ced4afcf8cb911"
     },
     {
@@ -97,6 +105,7 @@
       "cover": "http://placehold.it/256x256",
       "name": "Gonzales",
       "zhName": "Juliette",
+      "color": "#FFD677",
       "doodleId": "570858f93c5f8700b33f1d55"
     },
     {
@@ -108,6 +117,7 @@
       "cover": "http://placehold.it/256x256",
       "name": "Cervantes",
       "zhName": "Ward",
+      "color": "#FFD677",
       "doodleId": "570858f999ee3a90f3e993f3"
     },
     {
@@ -119,6 +129,7 @@
       "cover": "http://placehold.it/256x256",
       "name": "Key",
       "zhName": "Garrison",
+      "color": "#FFD677",
       "doodleId": "570858f9c14954e756ef4570"
     },
     {
@@ -130,6 +141,7 @@
       "cover": "http://placehold.it/256x256",
       "name": "Gonzalez",
       "zhName": "Spears",
+      "color": "#FFD677",
       "doodleId": "570858f9d8f85b7bc96818c7"
     },
     {
@@ -141,6 +153,7 @@
       "cover": "http://placehold.it/256x256",
       "name": "Horton",
       "zhName": "Carolyn",
+      "color": "#FBA5AB",
       "doodleId": "570858f909ced4afcf8cb911"
     },
     {
@@ -152,6 +165,7 @@
       "cover": "http://placehold.it/256x256",
       "name": "Gonzales",
       "zhName": "Juliette",
+      "color": "#6FC0F6",
       "doodleId": "570858f93c5f8700b33f1d55"
     },
     {
@@ -163,6 +177,7 @@
       "cover": "http://placehold.it/256x256",
       "name": "Cervantes",
       "zhName": "Ward",
+      "color": "#75BA56",
       "doodleId": "570858f999ee3a90f3e993f3"
     }
   ],

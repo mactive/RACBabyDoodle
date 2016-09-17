@@ -29,4 +29,7 @@
 #import <AFNetworking2_RACExtensions/RACAFNetworking.h>
 #import <Masonry/Masonry.h>
 #import "AppDef.h"
+
+#import "DataTrans.h"
+
 #endif

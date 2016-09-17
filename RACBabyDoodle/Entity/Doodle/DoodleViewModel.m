@@ -8,12 +8,24 @@
 
 #import "DoodleViewModel.h"
 #import "NetworkingManager.h"
+#import <UIColor_Hex/UIColor+Hex.h>
 
 @interface DoodleViewModel()
 @property(nonatomic, strong)RACCommand *loadDoodleCommand;
 @property(nonatomic, copy)NSDictionary *theDict;
 @property(nonatomic, strong) NSString *doodleId;
 @property(nonatomic, strong) NSString *guid;
+@property(nonatomic, strong) UIColor *color;
+
+@property(nonatomic, strong) NSString *name;
+@property(nonatomic, strong) NSString *zhName;
+@property(nonatomic, strong) NSArray *tags;
+@property(nonatomic, strong) NSString *packageZip;
+@property(nonatomic, strong) UIImage *cover;
+
+@property(nonatomic, strong) NSDate *createAt;
+@property(nonatomic, strong) NSDate *updateAt;
+
 @end
 
 @implementation DoodleViewModel
@@ -46,8 +58,10 @@
     _loadDoodleCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
         @strongify(self);
         RACSignal *sig = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+            /* 具体的数值转换 */
             self.doodleId = input[@"doodleId"];
             self.guid = input[@"guid"];
+            self.color = [UIColor colorWithCSS:input[@"color"]];
 
             [subscriber sendNext:@(YES)];
             [subscriber sendCompleted];

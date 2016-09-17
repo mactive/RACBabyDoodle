@@ -51,4 +51,28 @@ NS_INLINE BOOL OSVersionIsAtLeastiOS7() {
 (((a) && [(a) isKindOfClass:[NSString class]]) ? (a) : @"")
 
 
+// data time format
+#define ISO_TIMEZONE_UTC_FORMAT     @"Z"
+#define ISO_TIMEZONE_OFFSET_FORMAT  @"+%02d:%02d"
+
+#define DATETIME_FORMATE    @"yyyy-MM-dd HH:mm:ss "  //@"yyyy-MM-dd hh:mm:ss"
+#define DATE_FORMATE        @"yyyy-MM"
+#define DATE_YMD_FORMATE    @"yyyy-MM-dd"
+
+NS_INLINE BOOL StringHasValue(id str) {
+    return (str != nil) && (str != [NSNull null]) && (![str isEqualToString:@""] && (![str isEqualToString:@"(null)"]));
+}
+
+NS_INLINE BOOL NumberHasRealValue(id str) {
+    return (str != nil) && (str != [NSNull null]) && (![str isEqualToNumber:[NSNumber numberWithInt:0]]);
+}
+
+NS_INLINE BOOL NumberHasValue(id str) {
+    return (str != nil) && (str != [NSNull null]);
+}
+
+NS_INLINE BOOL BoolHasValue(id str) {
+    return (str != nil) && (str != [NSNull null]);
+}
+
 #endif /* AppDef_h */

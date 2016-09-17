@@ -10,5 +10,6 @@ target 'RACBabyDoodle' do
     pod 'SVProgressHUD'
 	pod 'Mixpanel', '~> 2.9.4'
 	pod 'Masonry'
+	pod 'UIColor+Hex'
 end
 

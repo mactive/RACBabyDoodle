@@ -23,6 +23,7 @@
 @property(nonatomic, readonly) NSArray *tags;
 @property(nonatomic, readonly) NSString *packageZip;
 @property(nonatomic, readonly) UIImage *cover;
+@property(nonatomic, readonly) UIColor *color;
 
 @property(nonatomic, readonly) NSDate *createAt;
 @property(nonatomic, readonly) NSDate *updateAt;
