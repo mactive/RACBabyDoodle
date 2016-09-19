@@ -11,8 +11,9 @@
 #import "ListDoodleFlowLayout.h"
 #import "NetworkingManager.h"
 #import "DoodleViewModel.h"
+#import "PlayDoodleViewController.h"
 
-@interface ListDoodleViewContorller()<UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
+@interface ListDoodleViewContorller()<UICollectionViewDataSource,UICollectionViewDelegate>
 
 @property(nonatomic, strong)UICollectionView *theCollectionView;
 @property(nonatomic, strong)NSMutableArray *dataSource;
@@ -91,7 +92,18 @@
 
 }
 
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"indexPath %ld",indexPath.row);
+    DoodleViewModel *viewModel = [self.dataSource objectAtIndex:indexPath.row];
+    PlayDoodleViewController *playVC = [[PlayDoodleViewController alloc]init];
+    playVC.viewModel = viewModel;
+    
+    [self presentViewController:playVC animated:YES completion:^{
+        //
+    }];
 
+}
 
 
 

@@ -12,5 +12,6 @@ target 'RACBabyDoodle' do
 	pod 'Masonry'
 	pod 'UIColor+Hex'
 	pod 'SDWebImage', '~>3.8'
+	pod 'YYModel'
 end
 

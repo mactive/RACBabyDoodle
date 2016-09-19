@@ -27,7 +27,7 @@
     self = [super initWithFrame:frame];
     if(self){
         // rand 0.5 - 1
-        CGFloat scale = [self randomBetweenSmall:0.8 big:1.0];
+        CGFloat scale = [self randomBetweenSmall:0.7 big:0.9];
         CGFloat startX = frame.size.width * (1 - scale) / 2;
         CGFloat width = frame.size.width * scale;
 
@@ -41,6 +41,7 @@
         [_mainView addSubview:_avatarView];
         [_mainView addSubview:_titleLabel];
         _titleLabel.textAlignment = NSTextAlignmentCenter;
+        _titleLabel.font = FONT_14;
         _mainView.layer.cornerRadius = width / 2;
         _mainView.layer.masksToBounds = YES;
 

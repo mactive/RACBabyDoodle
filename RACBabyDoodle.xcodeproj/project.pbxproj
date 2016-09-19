@@ -28,6 +28,7 @@
 		C2D37CEB1CC0788900C60D5C /* SRGViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D37CEA1CC0788900C60D5C /* SRGViewModel.m */; };
 		C2D37CEE1CC078C700C60D5C /* SRGCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D37CED1CC078C700C60D5C /* SRGCellViewModel.m */; };
 		C2E9DCB51D8CE828005827D3 /* DataTrans.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E9DCB41D8CE828005827D3 /* DataTrans.m */; };
+		C2E9DCB81D8E0CCC005827D3 /* PlayDoodleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E9DCB71D8E0CCC005827D3 /* PlayDoodleViewController.m */; };
 		FECF661AFC4917C1899C4911 /* Pods_RACBabyDoodle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEA03EFFD5868452D8A3A925 /* Pods_RACBabyDoodle.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +76,8 @@
 		C2D37CED1CC078C700C60D5C /* SRGCellViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRGCellViewModel.m; sourceTree = "<group>"; };
 		C2E9DCB31D8CE828005827D3 /* DataTrans.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataTrans.h; sourceTree = "<group>"; };
 		C2E9DCB41D8CE828005827D3 /* DataTrans.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataTrans.m; sourceTree = "<group>"; };
+		C2E9DCB61D8E0CCC005827D3 /* PlayDoodleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayDoodleViewController.h; sourceTree = "<group>"; };
+		C2E9DCB71D8E0CCC005827D3 /* PlayDoodleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayDoodleViewController.m; sourceTree = "<group>"; };
 		FEA03EFFD5868452D8A3A925 /* Pods_RACBabyDoodle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RACBabyDoodle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -117,6 +120,8 @@
 		04B7CCDC1CDABC0500BFE3CE /* PlayDoodle */ = {
 			isa = PBXGroup;
 			children = (
+				C2E9DCB61D8E0CCC005827D3 /* PlayDoodleViewController.h */,
+				C2E9DCB71D8E0CCC005827D3 /* PlayDoodleViewController.m */,
 			);
 			path = PlayDoodle;
 			sourceTree = "<group>";
@@ -559,6 +564,7 @@
 				C2317A0D1CC36E8800562C2C /* SRGTableViewCell.m in Sources */,
 				C2A696D71D7BE39A0008C6FB /* DoodleViewModel.m in Sources */,
 				C2D37CEE1CC078C700C60D5C /* SRGCellViewModel.m in Sources */,
+				C2E9DCB81D8E0CCC005827D3 /* PlayDoodleViewController.m in Sources */,
 				C22E8BA61D52EE3F0065139B /* BaseUIViewController.m in Sources */,
 				04B7CCE81CDAC90D00BFE3CE /* UIColorUtil.m in Sources */,
 				0467EF0E1D52C6C700DED390 /* ListDoodleFlowLayout.m in Sources */,

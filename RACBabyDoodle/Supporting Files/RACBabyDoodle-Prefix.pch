@@ -29,6 +29,7 @@
 #import <AFNetworking2_RACExtensions/RACAFNetworking.h>
 #import <Masonry/Masonry.h>
 #import <SDWebImage/UIImageView+WebCache.h>
+#import <YYModel/YYModel.h>
 #import "AppDef.h"
 
 #import "DataTrans.h"

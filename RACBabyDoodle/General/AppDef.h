@@ -75,4 +75,15 @@ NS_INLINE BOOL BoolHasValue(id str) {
     return (str != nil) && (str != [NSNull null]);
 }
 
+
+#define FONT_10 [UIFont systemFontOfSize:10.0f]
+#define FONT_11 [UIFont systemFontOfSize:11.0f]
+#define FONT_12 [UIFont systemFontOfSize:12.0f]
+#define FONT_13 [UIFont systemFontOfSize:13.0f]
+#define FONT_15 [UIFont systemFontOfSize:15.0f]
+#define FONT_14 [UIFont systemFontOfSize:14.0f]
+#define FONT_16 [UIFont systemFontOfSize:16.0f]
+#define FONT_20 [UIFont systemFontOfSize:20.0f]
+#define FONT_24 [UIFont systemFontOfSize:24.0f]
+
 #endif /* AppDef_h */
