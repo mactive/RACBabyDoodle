@@ -8,7 +8,7 @@
 
 #import "PlayDoodleViewController.h"
 
-@interface PlayDoodleViewController ()
+@interface PlayDoodleViewController ()<UIViewControllerTransitioningDelegate>
 
 @end
 
@@ -18,6 +18,19 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor redColor];
+    [self initUI];
+}
+
+- (void)initUI{
+    UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [backButton setTitle:@"back" forState:UIControlStateNormal];
+    [backButton setFrame:CGRectMake(20, 20, 100, 50)];
+    [self.view addSubview:backButton];
+    backButton.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+        return [RACSignal empty];
+    }];
+
 }
 
 - (void)didReceiveMemoryWarning {

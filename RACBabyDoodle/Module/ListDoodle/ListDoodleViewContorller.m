@@ -12,8 +12,9 @@
 #import "NetworkingManager.h"
 #import "DoodleViewModel.h"
 #import "PlayDoodleViewController.h"
+#import "PingTransition.h"
 
-@interface ListDoodleViewContorller()<UICollectionViewDataSource,UICollectionViewDelegate>
+@interface ListDoodleViewContorller()<UICollectionViewDataSource,UICollectionViewDelegate,UIViewControllerTransitioningDelegate>
 
 @property(nonatomic, strong)UICollectionView *theCollectionView;
 @property(nonatomic, strong)NSMutableArray *dataSource;
@@ -103,6 +104,13 @@
         //
     }];
 
+}
+
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source
+{
+    PingTransition *ping = [PingTransition new];
+    return ping;
+    
 }
 
 

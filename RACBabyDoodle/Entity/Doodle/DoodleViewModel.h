@@ -28,6 +28,9 @@
 @property(nonatomic, readonly) NSDate *createAt;
 @property(nonatomic, readonly) NSDate *updateAt;
 
+@property(nonatomic, readonly) NSString *testString;
+
+
 //"guid": "b6fd8811-575f-4c0c-8bee-bf4391d31757",
 //"updateAt": "2015-08-17 04:51:30",
 //"createAt": "2014-11-27 00:36:37",

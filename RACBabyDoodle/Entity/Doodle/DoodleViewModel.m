@@ -29,11 +29,14 @@
 
 @implementation DoodleViewModel
 
+@synthesize testString = _testString;
+
 - (instancetype) initWithDict:(NSDictionary *)dict
 {
     self = [super init];
     // 非空判断
     self.doodleId = dict[@"doodleId"];
+    _testString = @"adfd";
     
     // 一个观察 看时候触发RACCommand
     @weakify(self);
