@@ -7,8 +7,8 @@
 //
 
 #import "PingInvertTransition.h"
-#import "ViewController.h"
-#import "SecondViewController.h"
+#import "ListDoodleViewContorller.h"
+#import "PlayDoodleViewController.h"
 
 @interface PingInvertTransition()
 @property(nonatomic,strong)id<UIViewControllerContextTransitioning>transitionContext;

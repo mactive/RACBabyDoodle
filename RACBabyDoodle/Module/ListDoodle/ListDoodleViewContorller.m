@@ -100,6 +100,9 @@
     PlayDoodleViewController *playVC = [[PlayDoodleViewController alloc]init];
     playVC.viewModel = viewModel;
     
+//    playVC.modalTransitionStyle = UIModalPresentationCustom;
+    playVC.transitioningDelegate = self;
+    
     [self presentViewController:playVC animated:YES completion:^{
         //
     }];
@@ -110,7 +113,11 @@
 {
     PingTransition *ping = [PingTransition new];
     return ping;
-    
+}
+
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed
+{
+    return nil;
 }
 
 
