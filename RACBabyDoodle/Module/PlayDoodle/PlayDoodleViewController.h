@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-@class DoodleViewModel;
+#import "DoodleViewModel.h"
 
 @interface PlayDoodleViewController : UIViewController
 @property(nonatomic, strong)DoodleViewModel *viewModel;

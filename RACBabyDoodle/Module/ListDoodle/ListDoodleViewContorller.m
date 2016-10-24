@@ -18,6 +18,9 @@
 
 @property(nonatomic, strong)UICollectionView *theCollectionView;
 @property(nonatomic, strong)NSMutableArray *dataSource;
+@property(nonatomic, assign)CGRect startFrame;
+@property(nonatomic, assign)CGPoint startCenter;
+
 
 
 @end
@@ -88,7 +91,6 @@
     }
     
     cell.viewModel = [self.dataSource objectAtIndex:indexPath.row];
-
     return cell;
 
 }
@@ -96,11 +98,23 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"indexPath %ld",indexPath.row);
+
+    UICollectionViewLayoutAttributes *attributes = [collectionView layoutAttributesForItemAtIndexPath:indexPath];
+    
+    self.startFrame = CGRectMake(attributes.frame.origin.x, attributes.frame.origin.y - collectionView.contentOffset.y, attributes.frame.size.width, attributes.frame.size.height);
+//    attributes.frame;
+    self.startCenter = CGPointMake(attributes.center.x, attributes.center.y-collectionView.contentOffset.y);
+    
+    CGFloat origin_x = self.startCenter.x - self.startFrame.size.width / 2;
+    CGFloat origin_y = self.startCenter.y - self.startFrame.size.height / 2;
+    self.startFrame = CGRectMake(origin_x, origin_y, self.startFrame.size.width, self.startFrame.size.height);
+    
+    
+    
     DoodleViewModel *viewModel = [self.dataSource objectAtIndex:indexPath.row];
     PlayDoodleViewController *playVC = [[PlayDoodleViewController alloc]init];
     playVC.viewModel = viewModel;
     
-//    playVC.modalTransitionStyle = UIModalPresentationCustom;
     playVC.transitioningDelegate = self;
     
     [self presentViewController:playVC animated:YES completion:^{
@@ -112,6 +126,11 @@
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source
 {
     PingTransition *ping = [PingTransition new];
+    ping.startCenter = self.startCenter;
+    ping.startFrame = self.startFrame;
+
+
+    
     return ping;
 }
 

@@ -13,11 +13,12 @@
 @end
 
 @implementation PlayDoodleViewController
+@synthesize viewModel;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor redColor];
+    self.view.backgroundColor = viewModel.color;
     [self initUI];
 }
 
@@ -30,7 +31,6 @@
         [self dismissViewControllerAnimated:YES completion:nil];
         return [RACSignal empty];
     }];
-
 }
 
 - (void)didReceiveMemoryWarning {

@@ -11,5 +11,6 @@
 
 @interface ListDoodleViewCell : UICollectionViewCell
 @property(nonatomic, strong) DoodleViewModel *viewModel;
+@property(nonatomic, assign) CGRect frame;
 
 @end

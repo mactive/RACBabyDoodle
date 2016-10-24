@@ -15,6 +15,8 @@
 @end
 
 @implementation PingTransition
+@synthesize startFrame;
+@synthesize startCenter;
 
 - (NSTimeInterval)transitionDuration:(id <UIViewControllerContextTransitioning>)transitionContext{
     return  0.7f;
@@ -28,37 +30,34 @@
     PlayDoodleViewController *toVC = (PlayDoodleViewController *)[transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
     UIView *contView = [transitionContext containerView];
 
-//    UIButton *button = fromVC.button;
-    CGRect buttonFrame = CGRectMake(100, 100, 50, 50);
-    CGPoint buttonCenter = CGPointMake(100, 100);
     
-    UIBezierPath *maskStartBP =  [UIBezierPath bezierPathWithOvalInRect:buttonFrame];
+    UIBezierPath *maskStartBP =  [UIBezierPath bezierPathWithOvalInRect:startFrame];
     [contView addSubview:fromVC.view];
     [contView addSubview:toVC.view];
 
     //创建两个圆形的 UIBezierPath 实例；一个是 button 的 size ，另外一个则拥有足够覆盖屏幕的半径。最终的动画则是在这两个贝塞尔路径之间进行的
     CGPoint finalPoint;
     //判断触发点在那个象限
-    if(buttonFrame.origin.x > (toVC.view.bounds.size.width / 2)){
-        if (buttonFrame.origin.y < (toVC.view.bounds.size.height / 2)) {
+    if(startFrame.origin.x > (toVC.view.bounds.size.width / 2)){
+        if (startFrame.origin.y < (toVC.view.bounds.size.height / 2)) {
             //第一象限
-            finalPoint = CGPointMake(buttonCenter.x - 0, buttonCenter.y - CGRectGetMaxY(toVC.view.bounds)+30);
+            finalPoint = CGPointMake(startCenter.x - 0, startCenter.y - CGRectGetMaxY(toVC.view.bounds)+30);
         }else{
             //第四象限
-            finalPoint = CGPointMake(buttonCenter.x - 0, buttonCenter.y - 0);
+            finalPoint = CGPointMake(startCenter.x - 0, startCenter.y - 0);
         }
     }else{
-        if (buttonFrame.origin.y < (toVC.view.bounds.size.height / 2)) {
+        if (startFrame.origin.y < (toVC.view.bounds.size.height / 2)) {
             //第二象限
-            finalPoint = CGPointMake(buttonCenter.x - CGRectGetMaxX(toVC.view.bounds), buttonCenter.y - CGRectGetMaxY(toVC.view.bounds)+30);
+            finalPoint = CGPointMake(startCenter.x - CGRectGetMaxX(toVC.view.bounds), startCenter.y - CGRectGetMaxY(toVC.view.bounds)+30);
         }else{
             //第三象限
-            finalPoint = CGPointMake(buttonCenter.x - CGRectGetMaxX(toVC.view.bounds), buttonCenter.y - 0);
+            finalPoint = CGPointMake(startCenter.x - CGRectGetMaxX(toVC.view.bounds), startCenter.y - 0);
         }
     }
     
     CGFloat radius = sqrt((finalPoint.x * finalPoint.x) + (finalPoint.y * finalPoint.y));
-    UIBezierPath *maskFinalBP = [UIBezierPath bezierPathWithOvalInRect:CGRectInset(buttonFrame, -radius, -radius)];
+    UIBezierPath *maskFinalBP = [UIBezierPath bezierPathWithOvalInRect:CGRectInset(startFrame, -radius, -radius)];
     
     //创建一个 CAShapeLayer 来负责展示圆形遮盖
     CAShapeLayer *maskLayer = [CAShapeLayer layer];

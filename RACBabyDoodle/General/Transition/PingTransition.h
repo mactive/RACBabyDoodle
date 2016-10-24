@@ -12,4 +12,8 @@
 
 @interface PingTransition : NSObject<UIViewControllerAnimatedTransitioning>
 
+@property(nonatomic, assign)CGRect startFrame;
+@property(nonatomic, assign)CGPoint startCenter;
+
+
 @end

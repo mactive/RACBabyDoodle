@@ -24,6 +24,7 @@
 
 @property(nonatomic, strong) NSDate *createAt;
 @property(nonatomic, strong) NSDate *updateAt;
+@property(nonatomic, assign) CGRect viewFrame;
 
 @end
 
@@ -74,6 +75,7 @@
             self.createAt = [DataTrans dateFromNSDatetimeStr:input[@"createAt"]];
             self.updateAt = [DataTrans dateFromNSDatetimeStr:input[@"updateAt"]];
             
+            
             [subscriber sendNext:@(YES)];
             [subscriber sendCompleted];
             
@@ -84,6 +86,13 @@
         return sig;
     }];
     return _loadDoodleCommand;
+}
+
+// 大小随机数发生器
+-(CGFloat)randomBetweenSmall:(CGFloat)smallNumber big:(CGFloat)bigNumber
+{
+    float diff = bigNumber - smallNumber;
+    return (((float) rand() / RAND_MAX) * diff) + smallNumber;
 }
 
 

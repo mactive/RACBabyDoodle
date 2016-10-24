@@ -29,6 +29,7 @@
 @property(nonatomic, readonly) NSDate *updateAt;
 
 @property(nonatomic, readonly) NSString *testString;
+@property(nonatomic, readonly) CGRect viewFrame;
 
 
 //"guid": "b6fd8811-575f-4c0c-8bee-bf4391d31757",

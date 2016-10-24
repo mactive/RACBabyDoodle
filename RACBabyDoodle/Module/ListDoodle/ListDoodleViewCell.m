@@ -15,7 +15,6 @@
 @property(nonatomic, strong)UIView *mainView;
 @property(nonatomic, strong)UILabel *titleLabel;
 @property(nonatomic, strong)UIImageView *avatarView;
-@property(nonatomic, assign)CGRect frame;
 @end
 
 @implementation ListDoodleViewCell
@@ -28,6 +27,7 @@
     if(self){
         // rand 0.5 - 1
         CGFloat scale = [self randomBetweenSmall:0.7 big:0.9];
+        NSLog(@"scale %f",scale);
         CGFloat startX = frame.size.width * (1 - scale) / 2;
         CGFloat width = frame.size.width * scale;
 
